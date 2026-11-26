@@ -1,62 +1,50 @@
 import React from 'react';
-import { DownloadIcon, PrinterIcon, SparklesIcon } from '@/components/ui/Icons';
 
 export function HowItWorks() {
   const steps = [
     {
-      num: '1',
-      title: 'Pick your books',
-      description: 'Choose single workbooks or save with the 5-in-1 preschool bundle.',
-      icon: SparklesIcon,
-      accent: 'bg-coral-light text-coral',
+      num: '01',
+      title: 'Pick your workbooks',
+      description: 'Choose single subjects or save 48% with the complete 5-in-1 preschool bundle.',
     },
     {
-      num: '2',
-      title: 'Instant download',
-      description: 'PDFs emailed immediately. No account or password required.',
-      icon: DownloadIcon,
-      accent: 'bg-sage-light text-sage',
+      num: '02',
+      title: 'Instant PDF download',
+      description: 'Your download links are emailed the moment you check out. No account or password needed.',
     },
     {
-      num: '3',
+      num: '03',
       title: 'Print at home',
-      description: 'Formatted for US Letter and A4. Print individual pages or the whole book.',
-      icon: PrinterIcon,
-      accent: 'bg-marigold-light text-marigold',
+      description: 'Formatted for standard US Letter & A4. Print individual worksheets or bind the whole book.',
     },
   ];
 
   return (
-    <section id="how-it-works" className="py-14 md:py-20 bg-cream/40 border-y border-border-warm">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-10">
-        <div className="text-center">
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
+    <section id="how-it-works" className="py-16 md:py-24 bg-cream/40 border-t border-border-warm">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border-warm pb-5">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal tracking-tight">
             How it works
           </h2>
+          <span className="text-xs text-muted font-medium">
+            From checkout to printing in 2 minutes
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {steps.map((step, idx) => {
-            const Icon = step.icon;
-            return (
-              <div
-                key={idx}
-                className="bg-white rounded-2xl p-6 border border-border-warm shadow-xs text-center space-y-3"
-              >
-                <div className={`w-12 h-12 rounded-xl ${step.accent} flex items-center justify-center mx-auto`}>
-                  <Icon size={22} />
-                </div>
-
-                <h3 className="font-heading font-bold text-base text-charcoal">
-                  {step.title}
-                </h3>
-
-                <p className="text-xs text-muted leading-relaxed">
-                  {step.description}
-                </p>
-              </div>
-            );
-          })}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+          {steps.map((step, idx) => (
+            <div key={idx} className="space-y-3">
+              <span className="font-heading font-bold text-3xl sm:text-4xl text-charcoal/20 select-none block">
+                {step.num}
+              </span>
+              <h3 className="font-heading font-bold text-lg text-charcoal">
+                {step.title}
+              </h3>
+              <p className="text-sm text-muted leading-relaxed font-normal">
+                {step.description}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

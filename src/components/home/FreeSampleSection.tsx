@@ -43,7 +43,7 @@ export function FreeSampleSection() {
   }
 
   return (
-    <section id="free-sample" className="py-20 md:py-28 border-t border-border-warm bg-[#FAF8F5]">
+    <section id="free-sample" className="py-20 md:py-28 bg-white border-t border-border-warm">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
           {/* Cover Presentation: Substantial, realistic book presentation */}
@@ -95,7 +95,7 @@ export function FreeSampleSection() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
                   required
-                  className="flex-1 px-5 py-3.5 rounded-2xl bg-white border border-border-warm focus:border-charcoal text-base text-charcoal outline-none transition-colors placeholder:text-muted/60 shadow-2xs"
+                  className="flex-1 px-5 py-3.5 rounded-2xl bg-cream/60 border border-border-warm focus:bg-white focus:border-charcoal text-base text-charcoal outline-none transition-colors placeholder:text-muted/60 shadow-2xs"
                 />
 
                 <button

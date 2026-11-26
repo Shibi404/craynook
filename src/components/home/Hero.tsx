@@ -7,7 +7,7 @@ import { ArrowRightIcon } from '@/components/ui/Icons';
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden py-14 md:py-24 bg-linear-to-b from-cream via-cream to-white">
+    <section className="relative overflow-hidden py-14 md:py-22 bg-cream/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Column: Minimal Copy & CTAs */}

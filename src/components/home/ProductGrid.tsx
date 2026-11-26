@@ -18,7 +18,7 @@ export function ProductGrid({ products }: ProductGridProps) {
       : products.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="shop" className="py-12 md:py-18 bg-white">
+    <section id="shop" className="py-14 md:py-20 bg-white border-t border-border-warm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         {/* Clean Header & Filters */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-border-warm pb-5">

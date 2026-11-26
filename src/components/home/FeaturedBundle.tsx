@@ -18,7 +18,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
   ];
 
   return (
-    <section id="bundle" className="py-10 md:py-14 bg-cream/40">
+    <section id="bundle" className="py-10 md:py-16 bg-cream/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="rounded-3xl bg-white border border-border-warm p-6 sm:p-10 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Details */}
