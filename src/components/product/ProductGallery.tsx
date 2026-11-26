@@ -21,7 +21,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
     <div className="space-y-4">
       {/* Main Viewport */}
       <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden bg-white shadow-md group">
-        <div className="w-full h-full p-2">
+        <div className="w-full h-full">
           {activeIndex === 0 ? (
             <BookCoverSvg slug={product.slug} title={product.title} />
           ) : (

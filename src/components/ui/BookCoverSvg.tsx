@@ -34,9 +34,8 @@ function renderCover(slug: string, className: string, title?: string) {
           className={`w-full h-full select-none ${className}`}
           aria-label={title || 'Alphabet Tracing & Phonics Workbook Cover'}
         >
-          {/* Paper Background & Shadow Accent */}
-          <rect width="400" height="520" rx="16" fill="#FDF0ED" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
+          {/* Solid Edge-to-Edge Cover */}
+          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
           
           {/* Header Banner */}
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF0ED" />
@@ -93,17 +92,17 @@ function renderCover(slug: string, className: string, title?: string) {
 
           {/* Badges Footer Strip */}
           <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
+            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF0ED" />
             <text x="48" y="21" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               ALPHABET
             </text>
 
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
+            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
             <text x="160" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               48 PAGES
             </text>
 
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
+            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF8EE" />
             <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
               US LETTER & A4
             </text>
@@ -120,8 +119,7 @@ function renderCover(slug: string, className: string, title?: string) {
           className={`w-full h-full select-none ${className}`}
           aria-label={title || 'Numbers & Early Math Workbook Cover'}
         >
-          <rect width="400" height="520" rx="16" fill="#FDF8EE" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
+          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
           <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
@@ -161,7 +159,7 @@ function renderCover(slug: string, className: string, title?: string) {
 
             {/* Ten-Frame Counter Box */}
             <g transform="translate(15, 175)">
-              <rect x="0" y="0" width="250" height="35" rx="6" fill="#FDF8EE" stroke="#EAE4DC" strokeWidth="1.5" />
+              <rect x="0" y="0" width="250" height="35" rx="6" fill="#FDF8EE" />
               <line x1="50" y1="0" x2="50" y2="35" stroke="#EAE4DC" />
               <line x1="100" y1="0" x2="100" y2="35" stroke="#EAE4DC" />
               <line x1="150" y1="0" x2="150" y2="35" stroke="#EAE4DC" />
@@ -175,17 +173,17 @@ function renderCover(slug: string, className: string, title?: string) {
           </g>
 
           <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
+            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" />
             <text x="48" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               EARLY MATH
             </text>
 
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
+            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
             <text x="160" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               52 PAGES
             </text>
 
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
+            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" />
             <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
               US LETTER & A4
             </text>
@@ -202,8 +200,7 @@ function renderCover(slug: string, className: string, title?: string) {
           className={`w-full h-full select-none ${className}`}
           aria-label={title || 'Pre-Writing & Scissor Skills Pack Cover'}
         >
-          <rect width="400" height="520" rx="16" fill="#F0F5F1" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
+          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#F0F5F1" />
           <text x="200" y="58" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
@@ -242,17 +239,17 @@ function renderCover(slug: string, className: string, title?: string) {
           </g>
 
           <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
+            <rect x="0" y="0" width="96" height="34" rx="8" fill="#F0F5F1" />
             <text x="48" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               SCISSORS
             </text>
 
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
+            <rect x="110" y="0" width="100" height="34" rx="8" fill="#FDF8EE" />
             <text x="160" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               44 PAGES
             </text>
 
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
+            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" />
             <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
               US LETTER & A4
             </text>
@@ -283,8 +280,7 @@ function renderCover(slug: string, className: string, title?: string) {
           className={`w-full h-full select-none ${className}`}
           aria-label={title || 'Preschool Logic, Mazes & Patterns Cover'}
         >
-          <rect width="400" height="520" rx="16" fill="#FDF8EE" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
+          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
           <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
@@ -328,17 +324,17 @@ function renderCover(slug: string, className: string, title?: string) {
           </g>
 
           <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
+            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" />
             <text x="48" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               MAZES
             </text>
 
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
+            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
             <text x="160" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               46 PAGES
             </text>
 
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
+            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" />
             <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
               US LETTER & A4
             </text>
@@ -357,8 +353,7 @@ function renderCover(slug: string, className: string, title?: string) {
           aria-label={title || 'The Complete Preschool Bundle Cover'}
         >
           {/* Bundle Luxury Stack */}
-          <rect width="400" height="520" rx="16" fill="#FDF0ED" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
+          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
 
           {/* Ribbon Badge */}
           <g transform="translate(245, 12)">
@@ -387,43 +382,43 @@ function renderCover(slug: string, className: string, title?: string) {
           {/* Central Artwork: 5 mini book badges displayed harmoniously */}
           <g transform="translate(45, 190)">
             {/* 1: Alphabet */}
-            <rect x="0" y="0" width="95" height="95" rx="10" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1.5" />
+            <rect x="0" y="0" width="95" height="95" rx="10" fill="#FDF0ED" />
             <text x="47.5" y="48" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">Aa</text>
             <text x="47.5" y="75" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Alphabet</text>
 
             {/* 2: Math */}
-            <rect x="110" y="0" width="95" height="95" rx="10" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1.5" />
+            <rect x="110" y="0" width="95" height="95" rx="10" fill="#FDF8EE" />
             <text x="157.5" y="48" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">123</text>
             <text x="157.5" y="75" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Early Math</text>
 
             {/* 3: Scissors */}
-            <rect x="220" y="0" width="95" height="95" rx="10" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1.5" />
+            <rect x="220" y="0" width="95" height="95" rx="10" fill="#F0F5F1" />
             <text x="267.5" y="48" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="28">✂</text>
             <text x="267.5" y="75" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Scissor Skills</text>
 
             {/* 4: Dino */}
-            <rect x="55" y="110" width="95" height="95" rx="10" fill="#EEF6FC" stroke="#6DAEDB" strokeWidth="1.5" />
+            <rect x="55" y="110" width="95" height="95" rx="10" fill="#EEF6FC" />
             <text x="102.5" y="158" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">🦕</text>
             <text x="102.5" y="185" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Coloring</text>
 
             {/* 5: Mazes */}
-            <rect x="165" y="110" width="95" height="95" rx="10" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1.5" />
+            <rect x="165" y="110" width="95" height="95" rx="10" fill="#FDF8EE" />
             <text x="212.5" y="158" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">🧩</text>
             <text x="212.5" y="185" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Logic Mazes</text>
           </g>
 
           <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="100" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
+            <rect x="0" y="0" width="100" height="34" rx="8" fill="#FDF0ED" />
             <text x="50" y="21" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               BEST VALUE
             </text>
 
-            <rect x="114" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
+            <rect x="114" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
             <text x="164" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
               228 PAGES
             </text>
 
-            <rect x="228" y="0" width="102" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
+            <rect x="228" y="0" width="102" height="34" rx="8" fill="#FDF8EE" />
             <text x="279" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
               $15 (WAS $29)
             </text>

@@ -20,7 +20,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
   return (
     <section id="bundle" className="py-10 md:py-16 bg-cream/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl bg-white border border-border-warm p-6 sm:p-10 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="rounded-3xl bg-white p-6 sm:p-10 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Left Details */}
           <div className="space-y-4 max-w-xl text-center lg:text-left">
             <div className="inline-block bg-coral-light text-coral font-heading font-bold text-xs px-3 py-1 rounded-full">
@@ -41,7 +41,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
               {shortTitles.map((title, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 rounded-full bg-cream text-charcoal text-xs font-heading font-medium border border-border-warm/70"
+                  className="px-3 py-1 rounded-full bg-cream text-charcoal text-xs font-heading font-medium"
                 >
                   {title}
                 </span>

@@ -12,10 +12,10 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group flex flex-col bg-white rounded-2xl p-3.5 shadow-xs transition-all duration-200 hover:shadow-md"
+      className="group flex flex-col transition-all duration-200"
     >
       {/* Cover Image */}
-      <div className="relative aspect-4/5 w-full rounded-xl overflow-hidden bg-cream group-hover:opacity-95 transition-opacity">
+      <div className="relative aspect-4/5 w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-lg transition-all duration-300 group-hover:scale-[1.01]">
         <BookCoverSvg slug={product.slug} title={product.title} />
 
         {product.badge && (
