@@ -1,6 +1,12 @@
 import type { Metadata } from 'next';
 import { Fredoka, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+import { ToastProvider } from '@/context/ToastContext';
+import { CartProvider } from '@/context/CartContext';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+import { CartDrawer } from '@/components/cart/CartDrawer';
+import { ToastContainer } from '@/components/ui/Toast';
 
 const fredoka = Fredoka({
   variable: '--font-fredoka',
@@ -55,8 +61,16 @@ export default function RootLayout({
       lang="en"
       className={`${fredoka.variable} ${plusJakartaSans.variable} scroll-smooth`}
     >
-      <body className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#2D2A26] font-body selection:bg-coral-light selection:text-coral">
-        {children}
+      <body className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#2D2A26] font-body selection:bg-coral-light selection:text-coral antialiased">
+        <ToastProvider>
+          <CartProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+            <ToastContainer />
+          </CartProvider>
+        </ToastProvider>
       </body>
     </html>
   );
