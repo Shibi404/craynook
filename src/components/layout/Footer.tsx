@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { DoodleCubLogo } from '@/components/ui/Icons';
+import { CrayNookLogo } from '@/components/ui/Icons';
 
 export function Footer() {
   return (
@@ -10,9 +10,9 @@ export function Footer() {
           {/* Logo & Tagline */}
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2">
-              <DoodleCubLogo size={28} />
+              <CrayNookLogo size={28} />
               <span className="font-heading font-bold text-lg text-charcoal">
-                Doodle<span className="text-coral">Cub</span>
+                Cray<span className="text-coral">Nook</span>
               </span>
             </Link>
             <span className="text-xs text-muted hidden sm:inline">•</span>
@@ -40,7 +40,7 @@ export function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-border-warm/60 mt-6 pt-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-muted">
-          <p>© 2026 DoodleCub. All rights reserved.</p>
+          <p>© 2026 CrayNook. All rights reserved.</p>
           <p>Instant PDF downloads • Secure checkout via Dodo Payments</p>
         </div>
       </div>

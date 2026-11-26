@@ -45,7 +45,7 @@ export async function POST(request: Request) {
           product_id: item!.product.dodoProductId,
           quantity: item!.quantity,
         })),
-        return_url: `${request.headers.get('origin') || 'https://doodlecub.com'}/success?session_id={CHECKOUT_SESSION_ID}`,
+        return_url: `${request.headers.get('origin') || 'https://craynook.com'}/success?session_id={CHECKOUT_SESSION_ID}`,
       };
 
       const dodoRes = await fetch(dodoEndpoint, {

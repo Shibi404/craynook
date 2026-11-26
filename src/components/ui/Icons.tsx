@@ -5,7 +5,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
   className?: string;
 }
 
-export function DoodleCubLogo({ size = 36, className = '' }: IconProps) {
+export function CrayNookLogo({ size = 36, className = '' }: IconProps) {
   return (
     <svg
       width={size}
@@ -14,7 +14,7 @@ export function DoodleCubLogo({ size = 36, className = '' }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
-      aria-label="DoodleCub Logo"
+      aria-label="CrayNook Logo"
     >
       {/* Bear Head */}
       <circle cx="24" cy="26" r="16" fill="#FAF8F5" stroke="#2D2A26" strokeWidth="2.5" />

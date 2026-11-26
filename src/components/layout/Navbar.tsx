@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { DoodleCubLogo, CartIcon, SparklesIcon, CloseIcon } from '@/components/ui/Icons';
+import { CrayNookLogo, CartIcon, SparklesIcon, CloseIcon } from '@/components/ui/Icons';
 
 export function Navbar() {
   const { cartCount, openCart } = useCart();
@@ -16,12 +16,12 @@ export function Navbar() {
         <Link
           href="/"
           className="flex items-center gap-2.5 group focus:outline-none"
-          aria-label="DoodleCub Home"
+          aria-label="CrayNook Home"
         >
-          <DoodleCubLogo size={38} className="transition-transform group-hover:scale-105" />
+          <CrayNookLogo size={38} className="transition-transform group-hover:scale-105" />
           <div className="flex flex-col">
             <span className="font-heading font-bold text-2xl text-charcoal tracking-tight group-hover:text-coral transition-colors">
-              Doodle<span className="text-coral">Cub</span>
+              Cray<span className="text-coral">Nook</span>
             </span>
             <span className="text-[10px] font-semibold text-muted tracking-wider uppercase -mt-1 hidden sm:block">
               Printable Workbooks

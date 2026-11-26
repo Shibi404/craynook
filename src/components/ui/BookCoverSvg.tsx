@@ -40,7 +40,7 @@ function renderCover(slug: string, className: string, title?: string) {
           {/* Header Banner */}
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF0ED" />
           <text x="200" y="58" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            DOODLECUB • EARLY LITERACY
+            CRAYNOOK • EARLY LITERACY
           </text>
 
           {/* Title Box */}
@@ -124,7 +124,7 @@ function renderCover(slug: string, className: string, title?: string) {
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
           <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            DOODLECUB • EARLY NUMERACY
+            CRAYNOOK • EARLY NUMERACY
           </text>
 
           <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
@@ -206,7 +206,7 @@ function renderCover(slug: string, className: string, title?: string) {
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#F0F5F1" />
           <text x="200" y="58" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            DOODLECUB • FINE MOTOR SKILLS
+            CRAYNOOK • FINE MOTOR SKILLS
           </text>
 
           <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
@@ -273,7 +273,7 @@ function renderCover(slug: string, className: string, title?: string) {
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#EEF6FC" />
           <text x="200" y="58" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            DOODLECUB • CREATIVE PLAY
+            CRAYNOOK • CREATIVE PLAY
           </text>
 
           <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
@@ -352,7 +352,7 @@ function renderCover(slug: string, className: string, title?: string) {
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
           <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            DOODLECUB • CRITICAL THINKING
+            CRAYNOOK • CRITICAL THINKING
           </text>
 
           <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
@@ -644,7 +644,7 @@ function renderPreviewPage(slug: string, index: number, className: string) {
       <g transform="translate(30, 480)">
         <line x1="0" y1="0" x2="340" y2="0" stroke="#EAE4DC" strokeWidth="1" />
         <text x="0" y="16" fill="#6B655E" fontSize="9" fontFamily="var(--font-fredoka)">
-          DOODLECUB WORKBOOKS • PRINTABLE DIGITAL EDITION
+          CRAYNOOK WORKBOOKS • PRINTABLE DIGITAL EDITION
         </text>
         <text x="340" y="16" textAnchor="end" fill="#6B655E" fontSize="9">
           Page {index + 1}

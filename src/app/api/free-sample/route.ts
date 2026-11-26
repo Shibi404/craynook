@@ -13,7 +13,7 @@ export async function POST(request: Request) {
     }
 
     // Lead capture simulation (ready to hook to Resend, Kit/ConvertKit, Mailchimp, or webhook)
-    console.log(`[DoodleCub Free Sample] Requested for email: ${email}`);
+    console.log(`[CrayNook Free Sample] Requested for email: ${email}`);
 
     return NextResponse.json({
       success: true,

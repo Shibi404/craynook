@@ -114,7 +114,7 @@ function SuccessContent() {
 
         <p className="text-[11px] text-muted">
           Need assistance or haven&apos;t received your email? Contact{' '}
-          <strong className="text-charcoal">support@doodlecub.com</strong>.
+          <strong className="text-charcoal">support@craynook.com</strong>.
         </p>
       </div>
     </div>

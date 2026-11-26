@@ -181,7 +181,7 @@ export const PRODUCTS: Product[] = [
       '/previews/complete-bundle-p4.svg',
     ],
     description:
-      'The ultimate screen-free early childhood toolkit! Get all 5 best-selling DoodleCub workbooks in one convenient master download at ~50% off. Covers phonics, handwriting, early math 1–20, scissor skills, creative coloring, and brain-boosting logic mazes.',
+      'The ultimate screen-free early childhood toolkit! Get all 5 best-selling CrayNook workbooks in one convenient master download at ~50% off. Covers phonics, handwriting, early math 1–20, scissor skills, creative coloring, and brain-boosting logic mazes.',
     highlights: [
       'Includes all 5 standalone workbooks (228 total printable pages)',
       'Huge savings: $15 instead of $29 when purchased separately (save 48%)',

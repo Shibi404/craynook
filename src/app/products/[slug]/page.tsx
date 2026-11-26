@@ -34,9 +34,9 @@ export async function generateMetadata({
     title: product.title,
     description: product.description,
     openGraph: {
-      title: `${product.title} | DoodleCub Printable Workbooks`,
+      title: `${product.title} | CrayNook Printable Workbooks`,
       description: product.subtitle,
-      url: `https://doodlecub.com/products/${product.slug}`,
+      url: `https://craynook.com/products/${product.slug}`,
       type: 'website',
       images: [
         {

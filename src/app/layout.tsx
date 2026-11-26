@@ -24,8 +24,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | DoodleCub',
-    default: "DoodleCub — Screen-Free Printable Children's Workbooks",
+    template: '%s | CrayNook',
+    default: "CrayNook — Screen-Free Printable Children's Workbooks",
   },
   description:
     'Instant download printable PDF workbooks for little learners. Phonics, early math, scissor skills, dinosaur coloring, and complete activity bundles. Print unlimited times at home.',
@@ -39,13 +39,13 @@ export const metadata: Metadata = {
     'printable coloring book',
     'kindergarten prep',
   ],
-  metadataBase: new URL('https://doodlecub.com'),
+  metadataBase: new URL('https://craynook.com'),
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://doodlecub.com',
-    siteName: 'DoodleCub',
-    title: "DoodleCub — Screen-Free Printable Children's Workbooks",
+    url: 'https://craynook.com',
+    siteName: 'CrayNook',
+    title: "CrayNook — Screen-Free Printable Children's Workbooks",
     description:
       'Instant download printable PDF workbooks for little learners. Both US Letter and A4 formats included.',
   },
