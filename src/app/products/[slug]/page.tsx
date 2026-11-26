@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import Link from 'next/link';
@@ -11,6 +11,8 @@ import { ChevronRightIcon } from '@/components/ui/Icons';
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
+
+export const instant = false;
 
 export async function generateStaticParams() {
   return PRODUCTS.map((product) => ({
@@ -61,7 +63,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function ProductPage({ params }: PageProps) {
+async function ProductContent({ params }: PageProps) {
   const { slug } = await params;
   const product = getProductBySlug(slug);
 
@@ -108,5 +110,32 @@ export default async function ProductPage({ params }: PageProps) {
       {/* Related Products Section */}
       <RelatedProducts products={related} />
     </div>
+  );
+}
+
+function ProductPageSkeleton() {
+  return (
+    <div className="min-h-screen bg-white">
+      <div className="border-b border-border-warm bg-cream/40 h-11" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 animate-pulse">
+          <div className="lg:col-span-6 aspect-4/5 rounded-3xl bg-cream/50" />
+          <div className="lg:col-span-6 space-y-6 pt-4">
+            <div className="h-6 w-32 bg-cream rounded-full" />
+            <div className="h-10 w-3/4 bg-cream rounded-2xl" />
+            <div className="h-20 w-full bg-cream/60 rounded-2xl" />
+            <div className="h-14 w-full bg-cream rounded-2xl" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function ProductPage({ params }: PageProps) {
+  return (
+    <Suspense fallback={<ProductPageSkeleton />}>
+      <ProductContent params={params} />
+    </Suspense>
   );
 }
