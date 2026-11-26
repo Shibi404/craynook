@@ -94,7 +94,7 @@ function renderCover(slug: string, className: string, title?: string) {
           <g transform="translate(35, 435)">
             <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
             <text x="48" y="21" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              AGES 3–5
+              ALPHABET
             </text>
 
             <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
@@ -176,7 +176,7 @@ function renderCover(slug: string, className: string, title?: string) {
           <g transform="translate(35, 435)">
             <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
             <text x="48" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              AGES 3–5
+              EARLY MATH
             </text>
 
             <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
@@ -243,7 +243,7 @@ function renderCover(slug: string, className: string, title?: string) {
           <g transform="translate(35, 435)">
             <rect x="0" y="0" width="96" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
             <text x="48" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              AGES 3–5
+              SCISSORS
             </text>
 
             <rect x="110" y="0" width="100" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
@@ -322,7 +322,7 @@ function renderCover(slug: string, className: string, title?: string) {
           <g transform="translate(35, 435)">
             <rect x="0" y="0" width="96" height="34" rx="8" fill="#EEF6FC" stroke="#6DAEDB" strokeWidth="1" />
             <text x="48" y="21" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              AGES 3–5
+              COLORING
             </text>
 
             <rect x="110" y="0" width="100" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
@@ -394,7 +394,7 @@ function renderCover(slug: string, className: string, title?: string) {
           <g transform="translate(35, 435)">
             <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
             <text x="48" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              AGES 3–5
+              MAZES
             </text>
 
             <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" stroke="#7A9E7E" strokeWidth="1" />
@@ -445,7 +445,7 @@ function renderCover(slug: string, className: string, title?: string) {
             5-in-1 Printable Bundle
           </text>
           <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            228 Total Pages • Ages 3–5 • Print Unlimited Times
+            228 Total Pages • 5 Core Workbooks • Print Unlimited Times
           </text>
 
           {/* Central Artwork: 5 mini book badges displayed harmoniously */}

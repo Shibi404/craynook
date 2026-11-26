@@ -166,7 +166,7 @@ export const PRODUCTS: Product[] = [
     slug: 'the-complete-preschool-bundle',
     dodoProductId: 'p_prod_dodo_bundle_all',
     title: 'The Complete Preschool Bundle (All 5 Books)',
-    subtitle: 'Everything your little learner needs for ages 3–5 in one discounted mega-pack',
+    subtitle: 'Everything your little learner needs in one discounted mega-pack',
     price: 15,
     compareAtPrice: 29,
     ageRange: 'Ages 3–5',

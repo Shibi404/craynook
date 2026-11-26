@@ -10,86 +10,75 @@ interface FaqItem {
 
 const FAQS: FaqItem[] = [
   {
-    question: 'What paper sizes are included in the download?',
+    question: 'What paper sizes are included?',
     answer:
-      'Every workbook includes both standard US Letter (8.5×11 inches) and international A4 PDF files. Both files are formatted with generous margins so no content gets clipped by your home or school printer.',
+      'Both standard US Letter (8.5×11") and international A4 PDFs are included in every download.',
   },
   {
-    question: 'How quickly do I receive my workbooks after purchasing?',
+    question: 'How do I receive my workbooks?',
     answer:
-      'Immediately! The moment your checkout completes via Dodo Payments, you will see a download link on the confirmation screen, and an automated receipt containing permanent PDF download links is emailed directly to you. No login or password required.',
+      'Instantly. Download links appear right after checkout and are emailed to your receipt. No account needed.',
   },
   {
-    question: 'Can I print the pages more than once?',
+    question: 'Can I reprint pages multiple times?',
     answer:
-      'Yes! You receive unlimited personal and classroom printing rights. You can reprint favorite dinosaur coloring pages, reuse tracing sheets for siblings, or print worksheets multiple times for extra pencil control practice.',
+      'Yes. You have unlimited personal and classroom printing rights for all your children or students.',
   },
   {
-    question: 'What if I lose my download link or change computers?',
+    question: 'What if I lose my files?',
     answer:
-      'Your download links remain active in your email confirmation receipt forever. If you ever lose access to your email, simply contact us with your order details and we will resend your files right away.',
+      'Your download links never expire. Access them from your original email receipt anytime.',
   },
   {
-    question: 'What is your refund policy for digital downloads?',
+    question: 'What is your refund policy?',
     answer:
-      'We want you and your child to love DoodleCub! If you or your little learner are unsatisfied with the quality or usability of your workbook within 14 days, reach out to us and we will happily make it right or issue a full refund.',
-  },
-  {
-    question: 'What printing supplies or tools do we recommend?',
-    answer:
-      'Standard 20lb or 24lb copy paper works great. For coloring books and scissor crafts, slightly thicker 28lb or 32lb paper is wonderful. Pair with chunky washable crayons, triangular pencils for early grip, and child-safe rounded scissors.',
+      '14-day money-back guarantee. If you or your child aren’t satisfied, email us for a full refund.',
   },
 ];
 
 export function FaqAccordion() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   function toggle(idx: number) {
     setOpenIndex(openIndex === idx ? null : idx);
   }
 
   return (
-    <section id="faq" className="py-16 md:py-24 bg-cream/40 border-t border-border-warm">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 space-y-10">
-        <div className="text-center space-y-3">
-          <p className="text-coral font-heading font-semibold text-xs tracking-widest uppercase">
-            Common Questions
-          </p>
-          <h2 className="font-heading font-bold text-3xl sm:text-4xl text-charcoal">
-            Frequently Asked Questions
+    <section id="faq" className="py-14 md:py-20 bg-cream/40 border-t border-border-warm">
+      <div className="max-w-2xl mx-auto px-4 sm:px-6 space-y-8">
+        <div className="text-center">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
+            FAQ
           </h2>
-          <p className="text-muted text-sm sm:text-base">
-            Everything you need to know about downloading, printing, and using DoodleCub workbooks.
-          </p>
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2.5">
           {FAQS.map((faq, idx) => {
             const isOpen = openIndex === idx;
             return (
               <div
                 key={idx}
-                className="rounded-2xl border border-border-warm bg-white overflow-hidden transition-all shadow-xs"
+                className="rounded-xl border border-border-warm bg-white overflow-hidden shadow-2xs"
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 hover:bg-cream/40 transition-colors"
+                  className="w-full p-4 text-left flex items-center justify-between gap-4 hover:bg-cream/40 transition-colors"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-heading font-bold text-base text-charcoal">
+                  <span className="font-heading font-semibold text-sm text-charcoal">
                     {faq.question}
                   </span>
                   <span
-                    className={`p-1 rounded-full bg-cream text-muted transition-transform duration-200 shrink-0 ${
+                    className={`text-muted transition-transform duration-200 shrink-0 ${
                       isOpen ? 'rotate-180 text-coral' : ''
                     }`}
                   >
-                    <ChevronDownIcon size={16} />
+                    <ChevronDownIcon size={14} />
                   </span>
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-1 text-sm text-muted leading-relaxed border-t border-border-warm/60">
+                  <div className="px-4 pb-4 pt-1 text-xs text-muted leading-relaxed border-t border-border-warm/50">
                     {faq.answer}
                   </div>
                 )}

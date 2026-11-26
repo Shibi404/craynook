@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     default: "DoodleCub — Screen-Free Printable Children's Workbooks",
   },
   description:
-    'Instant download printable PDF workbooks for little learners ages 3–5. Phonics, early math, scissor skills, dinosaur coloring, and complete activity bundles. Print unlimited times at home.',
+    'Instant download printable PDF workbooks for little learners. Phonics, early math, scissor skills, dinosaur coloring, and complete activity bundles. Print unlimited times at home.',
   keywords: [
     'preschool printables',
     'children workbooks pdf',
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: 'DoodleCub',
     title: "DoodleCub — Screen-Free Printable Children's Workbooks",
     description:
-      'Instant download printable PDF workbooks for little learners ages 3–5. Both US Letter and A4 formats included.',
+      'Instant download printable PDF workbooks for little learners. Both US Letter and A4 formats included.',
   },
 };
 
