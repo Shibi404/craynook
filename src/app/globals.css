@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+@theme {
+  --color-cream: #FAF8F5;
+  --color-paper: #FFFFFF;
+  --color-border-warm: #EAE4DC;
+  --color-charcoal: #2D2A26;
+  --color-muted: #6B655E;
+
+  --color-coral: #E86F51;
+  --color-coral-hover: #D85C3E;
+  --color-coral-light: #FDF0ED;
+
+  --color-sage: #7A9E7E;
+  --color-sage-hover: #678B6B;
+  --color-sage-light: #F0F5F1;
+
+  --color-marigold: #E9B44C;
+  --color-marigold-hover: #D7A238;
+  --color-marigold-light: #FDF8EE;
+
+  --color-sky: #6DAEDB;
+  --color-sky-hover: #589AC7;
+  --color-sky-light: #EEF6FC;
+
+  --font-heading: var(--font-fredoka), system-ui, sans-serif;
+  --font-body: var(--font-plus-jakarta), system-ui, sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FAF8F5;
+  --foreground: #2D2A26;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #FAF8F5;
+  color: #2D2A26;
+  font-family: var(--font-plus-jakarta), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-fredoka), system-ui, sans-serif;
+}
+
+::selection {
+  background-color: #FDF0ED;
+  color: #E86F51;
 }
