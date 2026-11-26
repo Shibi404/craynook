@@ -1,19 +1,14 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { Product } from '@/types/product';
-import { useCart } from '@/context/CartContext';
 import { BookCoverSvg } from '@/components/ui/BookCoverSvg';
-import { CartIcon } from '@/components/ui/Icons';
+import { ArrowRightIcon } from '@/components/ui/Icons';
 
 interface FeaturedBundleProps {
   bundle: Product;
 }
 
 export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
-  const { addItem, checkout, isCheckingOut } = useCart();
-
   const shortTitles = [
     'Alphabet Tracing',
     'Early Math 1–20',
@@ -53,7 +48,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
               ))}
             </div>
 
-            {/* Pricing & Actions */}
+            {/* Pricing & Link */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <div className="flex items-baseline gap-2">
                 <span className="font-heading font-bold text-3xl text-charcoal">
@@ -64,23 +59,13 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
                 </span>
               </div>
 
-              <div className="flex items-center gap-3 w-full sm:w-auto">
-                <button
-                  onClick={() => addItem(bundle)}
-                  className="flex-1 sm:flex-initial px-6 py-3 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-md shadow-coral/20 transition-all hover:scale-[1.01] flex items-center justify-center gap-2"
-                >
-                  <CartIcon size={16} />
-                  <span>Add to Cart</span>
-                </button>
-
-                <button
-                  onClick={() => checkout({ product: bundle, quantity: 1 })}
-                  disabled={isCheckingOut}
-                  className="px-5 py-3 rounded-2xl bg-cream hover:bg-border-warm/50 text-charcoal font-heading font-semibold text-sm transition-all"
-                >
-                  Buy Now
-                </button>
-              </div>
+              <Link
+                href={`/products/${bundle.slug}`}
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-md shadow-coral/20 transition-all hover:scale-[1.01] inline-flex items-center justify-center gap-2"
+              >
+                <span>View Bundle</span>
+                <ArrowRightIcon size={16} />
+              </Link>
             </div>
           </div>
 

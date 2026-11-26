@@ -1,26 +1,21 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import { Product } from '@/types/product';
-import { useCart } from '@/context/CartContext';
 import { BookCoverSvg } from '@/components/ui/BookCoverSvg';
-import { CartIcon } from '@/components/ui/Icons';
+import { ArrowRightIcon } from '@/components/ui/Icons';
 
 interface ProductCardProps {
   product: Product;
 }
 
 export function ProductCard({ product }: ProductCardProps) {
-  const { addItem } = useCart();
-
   return (
-    <div className="group flex flex-col bg-white rounded-2xl border border-border-warm p-3.5 transition-all duration-200 hover:shadow-md hover:border-coral/40">
+    <Link
+      href={`/products/${product.slug}`}
+      className="group flex flex-col bg-white rounded-2xl border border-border-warm p-3.5 transition-all duration-200 hover:shadow-md hover:border-coral/40"
+    >
       {/* Cover Image */}
-      <Link
-        href={`/products/${product.slug}`}
-        className="relative aspect-4/5 w-full rounded-xl overflow-hidden bg-cream border border-border-warm/60 group-hover:opacity-95 transition-opacity"
-      >
+      <div className="relative aspect-4/5 w-full rounded-xl overflow-hidden bg-cream border border-border-warm/60 group-hover:opacity-95 transition-opacity">
         <BookCoverSvg slug={product.slug} title={product.title} />
 
         {product.badge && (
@@ -28,7 +23,7 @@ export function ProductCard({ product }: ProductCardProps) {
             {product.badge}
           </div>
         )}
-      </Link>
+      </div>
 
       {/* Info Content */}
       <div className="flex flex-col flex-1 pt-3">
@@ -37,14 +32,11 @@ export function ProductCard({ product }: ProductCardProps) {
         </span>
 
         {/* Title */}
-        <Link
-          href={`/products/${product.slug}`}
-          className="font-heading font-semibold text-base text-charcoal group-hover:text-coral transition-colors line-clamp-1"
-        >
+        <h3 className="font-heading font-semibold text-base text-charcoal group-hover:text-coral transition-colors line-clamp-1">
           {product.title}
-        </Link>
+        </h3>
 
-        {/* Pricing & CTA */}
+        {/* Pricing & Arrow */}
         <div className="flex items-center justify-between pt-3 mt-auto">
           <div className="flex items-baseline gap-1.5">
             <span className="font-heading font-bold text-lg text-charcoal">
@@ -57,16 +49,12 @@ export function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
-          <button
-            onClick={() => addItem(product)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-cream hover:bg-coral text-charcoal hover:text-white font-heading font-semibold text-xs border border-border-warm hover:border-coral transition-all active:scale-95"
-            aria-label={`Add ${product.title} to cart`}
-          >
-            <CartIcon size={13} />
-            <span>Add</span>
-          </button>
+          <span className="text-xs font-heading font-semibold text-coral flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+            <span>View</span>
+            <ArrowRightIcon size={13} />
+          </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
