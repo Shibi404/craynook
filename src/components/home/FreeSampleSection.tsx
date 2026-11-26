@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { MailIcon, CheckIcon } from '@/components/ui/Icons';
+import Image from 'next/image';
 import { useToast } from '@/context/ToastContext';
 
 export function FreeSampleSection() {
@@ -28,7 +28,7 @@ export function FreeSampleSection() {
       if (res.ok) {
         setStatus('success');
         showToast(
-          'Sample Sent!',
+          'Sample Sent',
           'Your 8-page printable starter pack is in your inbox.',
           'success'
         );
@@ -43,57 +43,76 @@ export function FreeSampleSection() {
   }
 
   return (
-    <section id="free-sample" className="py-14 md:py-18 bg-white">
-      <div className="max-w-xl mx-auto px-4 sm:px-6 text-center space-y-5">
-        <div>
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
-            Get an 8-page free sample
-          </h2>
-          <p className="text-muted text-sm mt-1.5">
-            Sample pages from our alphabet, math, scissor, and dinosaur workbooks.
-          </p>
-        </div>
-
-        {status === 'success' ? (
-          <div className="p-5 rounded-2xl bg-cream border border-sage/40 text-sage flex items-center justify-center gap-3">
-            <CheckIcon size={20} />
-            <p className="text-xs text-charcoal font-medium">
-              Sent to <strong>{email}</strong>. Check your inbox to download!
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col sm:flex-row gap-2.5 max-w-md mx-auto"
-          >
-            <div className="relative flex-1">
-              <MailIcon
-                size={16}
-                className="absolute left-3.5 top-1/2 -translate-y-1/2 text-muted"
-              />
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
-                required
-                className="w-full pl-10 pr-3.5 py-3 rounded-xl bg-cream border border-border-warm focus:border-coral focus:bg-white text-xs text-charcoal outline-none transition-all placeholder:text-muted"
+    <section id="free-sample" className="py-20 md:py-28 border-t border-border-warm bg-[#FAF8F5]">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
+          {/* Cover Presentation: Substantial, realistic book presentation */}
+          <div className="md:col-span-5 flex justify-center">
+            <div className="relative w-60 sm:w-72 md:w-80 aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-charcoal/10 border border-border-warm bg-white hover:scale-[1.01] transition-transform">
+              <Image
+                src="/free_starter_pack_cover_page.webp"
+                alt="Free Starter Pack Printable Workbook Cover"
+                width={896}
+                height={1200}
+                className="w-full h-full object-cover"
+                sizes="(max-width: 640px) 240px, (max-width: 768px) 288px, 320px"
               />
             </div>
+          </div>
 
-            <button
-              type="submit"
-              disabled={status === 'loading'}
-              className="px-5 py-3 rounded-xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-xs shadow-xs transition-all shrink-0"
-            >
-              {status === 'loading' ? 'Sending...' : 'Get Free Pack'}
-            </button>
-          </form>
-        )}
+          {/* Editorial Copy & Form: Scaled up for strong readability */}
+          <div className="md:col-span-7 space-y-6 text-center md:text-left">
+            <span className="text-xs font-heading font-semibold text-muted uppercase tracking-widest">
+              Free 8-Page Starter Pack
+            </span>
 
-        <p className="text-[11px] text-muted">
-          Instant PDF delivery. No spam, ever.
-        </p>
+            <div className="space-y-3">
+              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-charcoal tracking-tight leading-[1.12]">
+                Try a few pages first.
+              </h2>
+              <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg mx-auto md:mx-0 font-normal">
+                Download sample worksheets with alphabet tracing, early numbers, and scissor cutting to test on your home printer.
+              </p>
+            </div>
+
+            {status === 'success' ? (
+              <div className="py-4 text-base text-charcoal">
+                <p className="font-heading font-semibold text-sage text-lg">
+                  Sent to {email}
+                </p>
+                <p className="text-sm text-muted mt-1">
+                  Check your inbox for your PDF download links.
+                </p>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto md:mx-0 pt-2"
+              >
+                <input
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="Your email address"
+                  required
+                  className="flex-1 px-5 py-3.5 rounded-2xl bg-white border border-border-warm focus:border-charcoal text-base text-charcoal outline-none transition-colors placeholder:text-muted/60 shadow-2xs"
+                />
+
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="px-7 py-3.5 rounded-2xl bg-charcoal hover:bg-charcoal/90 text-white font-heading font-semibold text-sm tracking-wide transition-all shrink-0 active:scale-95 disabled:opacity-50 shadow-xs"
+                >
+                  {status === 'loading' ? 'Sending...' : 'Get Free Sample'}
+                </button>
+              </form>
+            )}
+
+            <p className="text-xs text-muted">
+              Delivered instantly as a PDF. No account or payment required.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
