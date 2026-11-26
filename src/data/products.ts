@@ -113,7 +113,7 @@ export const PRODUCTS: Product[] = [
     pageCount: 40,
     category: 'Coloring',
     formats: ['US Letter (8.5×11")', 'A4'],
-    coverImage: '/covers/dino-coloring.svg',
+    coverImage: '/dinosaur_colouring_book_cover_page.png',
     previewImages: [
       '/previews/dino-coloring-p1.svg',
       '/previews/dino-coloring-p2.svg',

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface BookCoverSvgProps {
   slug: string;
@@ -35,7 +36,7 @@ function renderCover(slug: string, className: string, title?: string) {
         >
           {/* Paper Background & Shadow Accent */}
           <rect width="400" height="520" rx="16" fill="#FDF0ED" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" stroke="#EAE4DC" strokeWidth="2" />
+          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
           
           {/* Header Banner */}
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF0ED" />
@@ -120,7 +121,7 @@ function renderCover(slug: string, className: string, title?: string) {
           aria-label={title || 'Numbers & Early Math Workbook Cover'}
         >
           <rect width="400" height="520" rx="16" fill="#FDF8EE" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" stroke="#EAE4DC" strokeWidth="2" />
+          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
           <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
@@ -202,7 +203,7 @@ function renderCover(slug: string, className: string, title?: string) {
           aria-label={title || 'Pre-Writing & Scissor Skills Pack Cover'}
         >
           <rect width="400" height="520" rx="16" fill="#F0F5F1" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" stroke="#EAE4DC" strokeWidth="2" />
+          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#F0F5F1" />
           <text x="200" y="58" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
@@ -261,81 +262,16 @@ function renderCover(slug: string, className: string, title?: string) {
 
     case 'dinosaur-adventure-coloring-book':
       return (
-        <svg
-          viewBox="0 0 400 520"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-full h-full select-none ${className}`}
-          aria-label={title || 'Dinosaur Adventure Coloring Book Cover'}
-        >
-          <rect width="400" height="520" rx="16" fill="#EEF6FC" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" stroke="#EAE4DC" strokeWidth="2" />
-          
-          <rect x="30" y="32" width="340" height="42" rx="8" fill="#EEF6FC" />
-          <text x="200" y="58" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            CRAYNOOK • CREATIVE PLAY
-          </text>
-
-          <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
-            Dinosaur Adventure
-          </text>
-          <text x="200" y="142" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="19">
-            Toddler-Friendly Coloring Book
-          </text>
-          <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            40 Bold Prehistoric Scenes • Thick Outlines • Zero Bleed Anxiety
-          </text>
-
-          {/* Central Artwork: Cute Toddler Dino */}
-          <g transform="translate(100, 190)">
-            {/* Dino Body */}
-            <path
-              d="M70 170C30 170 10 140 10 100C10 60 40 40 70 40C85 40 95 30 100 15C103 6 112 0 122 2C138 6 150 25 145 45C160 55 175 75 175 100C175 140 140 170 110 170Z"
-              fill="#EEF6FC"
-              stroke="#2D2A26"
-              strokeWidth="5"
-              strokeLinejoin="round"
-            />
-            {/* Dino Belly */}
-            <path d="M40 115C40 85 65 65 95 70C125 75 145 100 140 135" fill="none" stroke="#6DAEDB" strokeWidth="4" strokeLinecap="round" />
-            
-            {/* Dino Eye */}
-            <circle cx="125" cy="30" r="5" fill="#2D2A26" />
-            <circle cx="127" cy="28" r="1.5" fill="#FFFFFF" />
-            
-            {/* Cute Smile */}
-            <path d="M135 42C130 46 122 46 118 42" stroke="#2D2A26" strokeWidth="3" strokeLinecap="round" />
-
-            {/* Back Spikes */}
-            <polygon points="50,45 60,25 70,45" fill="#E86F51" stroke="#2D2A26" strokeWidth="2.5" />
-            <polygon points="30,65 35,45 48,65" fill="#E9B44C" stroke="#2D2A26" strokeWidth="2.5" />
-            <polygon points="18,90 20,70 32,90" fill="#7A9E7E" stroke="#2D2A26" strokeWidth="2.5" />
-
-            {/* Feet */}
-            <rect x="50" y="165" width="22" height="30" rx="8" fill="#EEF6FC" stroke="#2D2A26" strokeWidth="4" />
-            <rect x="95" y="165" width="22" height="30" rx="8" fill="#EEF6FC" stroke="#2D2A26" strokeWidth="4" />
-
-            {/* Tropical leaf */}
-            <path d="M-40 175C-20 140 0 155 20 180" stroke="#7A9E7E" strokeWidth="5" strokeLinecap="round" />
-          </g>
-
-          <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#EEF6FC" stroke="#6DAEDB" strokeWidth="1" />
-            <text x="48" y="21" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              COLORING
-            </text>
-
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#FDF8EE" stroke="#E9B44C" strokeWidth="1" />
-            <text x="160" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              40 PAGES
-            </text>
-
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" stroke="#E86F51" strokeWidth="1" />
-            <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              US LETTER & A4
-            </text>
-          </g>
-        </svg>
+        <div className={`relative w-full h-full overflow-hidden ${className}`}>
+          <Image
+            src="/dinosaur_colouring_book_cover_page.png"
+            alt={title || 'Dinosaur Adventure Coloring Book Cover'}
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
       );
 
     case 'preschool-logic-mazes-patterns':
@@ -348,7 +284,7 @@ function renderCover(slug: string, className: string, title?: string) {
           aria-label={title || 'Preschool Logic, Mazes & Patterns Cover'}
         >
           <rect width="400" height="520" rx="16" fill="#FDF8EE" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" stroke="#EAE4DC" strokeWidth="2" />
+          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
           
           <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
           <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
@@ -422,7 +358,7 @@ function renderCover(slug: string, className: string, title?: string) {
         >
           {/* Bundle Luxury Stack */}
           <rect width="400" height="520" rx="16" fill="#FDF0ED" />
-          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" stroke="#E86F51" strokeWidth="2.5" />
+          <rect x="14" y="14" width="372" height="492" rx="12" fill="#FFFFFF" />
 
           {/* Ribbon Badge */}
           <g transform="translate(245, 12)">
@@ -508,7 +444,7 @@ function renderPreviewPage(slug: string, index: number, className: string) {
     >
       {/* Printable Sheet Frame */}
       <rect width="400" height="520" fill="#FFFFFF" />
-      <rect x="15" y="15" width="370" height="490" rx="4" fill="#FFFFFF" stroke="#EAE4DC" strokeWidth="1" />
+      <rect x="15" y="15" width="370" height="490" rx="4" fill="#FFFFFF" />
 
       {/* Sheet Header */}
       <g transform="translate(30, 30)">

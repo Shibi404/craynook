@@ -12,14 +12,14 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group flex flex-col bg-white rounded-2xl border border-border-warm p-3.5 transition-all duration-200 hover:shadow-md hover:border-coral/40"
+      className="group flex flex-col bg-white rounded-2xl p-3.5 shadow-xs transition-all duration-200 hover:shadow-md"
     >
       {/* Cover Image */}
-      <div className="relative aspect-4/5 w-full rounded-xl overflow-hidden bg-cream border border-border-warm/60 group-hover:opacity-95 transition-opacity">
+      <div className="relative aspect-4/5 w-full rounded-xl overflow-hidden bg-cream group-hover:opacity-95 transition-opacity">
         <BookCoverSvg slug={product.slug} title={product.title} />
 
         {product.badge && (
-          <div className="absolute top-2.5 left-2.5 bg-white/95 text-charcoal border border-border-warm text-[10px] font-heading font-bold px-2 py-0.5 rounded-full shadow-2xs">
+          <div className="absolute top-2.5 left-2.5 bg-white/95 text-charcoal text-[10px] font-heading font-bold px-2 py-0.5 rounded-full shadow-2xs">
             {product.badge}
           </div>
         )}

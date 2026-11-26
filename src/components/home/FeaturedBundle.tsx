@@ -72,7 +72,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
           {/* Right Visual */}
           <Link
             href={`/products/${bundle.slug}`}
-            className="w-56 sm:w-64 aspect-4/5 rounded-2xl overflow-hidden shadow-md border border-border-warm bg-white hover:scale-[1.02] transition-transform shrink-0"
+            className="w-56 sm:w-64 aspect-4/5 rounded-2xl overflow-hidden shadow-md bg-white hover:scale-[1.02] transition-transform shrink-0"
           >
             <BookCoverSvg slug={bundle.slug} title={bundle.title} />
           </Link>

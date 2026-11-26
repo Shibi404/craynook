@@ -20,7 +20,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   return (
     <div className="space-y-4">
       {/* Main Viewport */}
-      <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden bg-white border border-border-warm shadow-md group">
+      <div className="relative aspect-4/5 w-full rounded-3xl overflow-hidden bg-white shadow-md group">
         <div className="w-full h-full p-2">
           {activeIndex === 0 ? (
             <BookCoverSvg slug={product.slug} title={product.title} />
@@ -37,14 +37,14 @@ export function ProductGallery({ product }: ProductGalleryProps) {
         {/* Zoom Lightbox Trigger */}
         <button
           onClick={() => setIsLightboxOpen(true)}
-          className="absolute top-4 right-4 p-2.5 rounded-full bg-white/90 backdrop-blur-xs text-charcoal hover:text-coral border border-border-warm shadow-sm hover:scale-105 transition-all opacity-0 group-hover:opacity-100"
+          className="absolute top-4 right-4 p-2.5 rounded-full bg-white/90 backdrop-blur-xs text-charcoal hover:text-coral shadow-sm hover:scale-105 transition-all opacity-0 group-hover:opacity-100"
           aria-label="Zoom preview image"
         >
           <ZoomInIcon size={18} />
         </button>
 
         {/* Slide Label */}
-        <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-xs border border-border-warm text-charcoal text-xs font-heading font-semibold px-3 py-1 rounded-full shadow-xs">
+        <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-xs text-charcoal text-xs font-heading font-semibold px-3 py-1 rounded-full shadow-xs">
           {activeIndex === 0 ? 'Front Cover' : `Interior Preview ${activeIndex} of ${previewCount}`}
         </div>
       </div>
@@ -54,10 +54,10 @@ export function ProductGallery({ product }: ProductGalleryProps) {
         {/* Cover Thumbnail */}
         <button
           onClick={() => setActiveIndex(0)}
-          className={`relative w-20 h-24 shrink-0 rounded-2xl overflow-hidden border-2 bg-white transition-all ${
+          className={`relative w-20 h-24 shrink-0 rounded-2xl overflow-hidden bg-white transition-all ${
             activeIndex === 0
-              ? 'border-coral shadow-md scale-105'
-              : 'border-border-warm hover:border-coral/50 opacity-70 hover:opacity-100'
+              ? 'ring-2 ring-coral shadow-md scale-105'
+              : 'shadow-xs hover:ring-1 hover:ring-coral/40 opacity-75 hover:opacity-100'
           }`}
           aria-label="View front cover"
         >
@@ -72,10 +72,10 @@ export function ProductGallery({ product }: ProductGalleryProps) {
             <button
               key={idx}
               onClick={() => setActiveIndex(slideIdx)}
-              className={`relative w-20 h-24 shrink-0 rounded-2xl overflow-hidden border-2 bg-white transition-all ${
+              className={`relative w-20 h-24 shrink-0 rounded-2xl overflow-hidden bg-white transition-all ${
                 isActive
-                  ? 'border-coral shadow-md scale-105'
-                  : 'border-border-warm hover:border-coral/50 opacity-70 hover:opacity-100'
+                  ? 'ring-2 ring-coral shadow-md scale-105'
+                  : 'shadow-xs hover:ring-1 hover:ring-coral/40 opacity-75 hover:opacity-100'
               }`}
               aria-label={`View preview page ${slideIdx}`}
             >
@@ -103,7 +103,7 @@ export function ProductGallery({ product }: ProductGalleryProps) {
             </button>
 
             {/* Lightbox Content */}
-            <div className="w-full aspect-4/5 max-h-[70vh] rounded-2xl overflow-hidden border border-border-warm bg-cream/30">
+            <div className="w-full aspect-4/5 max-h-[70vh] rounded-2xl overflow-hidden shadow-lg bg-cream/30">
               {activeIndex === 0 ? (
                 <BookCoverSvg slug={product.slug} title={product.title} />
               ) : (

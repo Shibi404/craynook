@@ -21,7 +21,7 @@ export function CartItemRow({ item }: CartItemRowProps) {
       <Link
         href={`/products/${product.slug}`}
         onClick={closeCart}
-        className="w-16 h-20 shrink-0 rounded-xl overflow-hidden border border-border-warm bg-white shadow-sm hover:opacity-90 transition-opacity"
+        className="w-16 h-20 shrink-0 rounded-xl overflow-hidden bg-white shadow-xs hover:opacity-90 transition-opacity"
       >
         <BookCoverSvg slug={product.slug} title={product.title} />
       </Link>

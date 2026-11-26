@@ -51,9 +51,9 @@ export function Hero() {
           {/* Right Column: Clean Book Showcase */}
           <div className="lg:col-span-5 flex items-center justify-center">
             <div className="relative w-68 sm:w-76 aspect-4/5">
-              <div className="absolute -inset-3 transform -rotate-4 rounded-3xl bg-marigold-light border border-marigold/30 shadow-sm opacity-80" />
-              <div className="absolute -inset-1.5 transform rotate-3 rounded-3xl bg-sage-light border border-sage/30 shadow-sm opacity-90" />
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl border border-border-warm bg-white">
+              <div className="absolute -inset-3 transform -rotate-4 rounded-3xl bg-marigold-light shadow-sm opacity-80" />
+              <div className="absolute -inset-1.5 transform rotate-3 rounded-3xl bg-sage-light shadow-sm opacity-90" />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl bg-white">
                 <BookCoverSvg
                   slug="alphabet-tracing-phonics-workbook"
                   title="Alphabet Tracing & Phonics Workbook"
