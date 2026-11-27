@@ -48,7 +48,7 @@ export function FreeSampleSection() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
           {/* Cover Presentation: Substantial, realistic book presentation */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-60 sm:w-72 md:w-80 aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-charcoal/10 bg-white hover:scale-[1.01] transition-transform">
+            <div className="relative w-60 sm:w-72 md:w-80 aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-charcoal/10 hover:shadow-charcoal/20 bg-white transition-shadow duration-300">
               <Image
                 src="/free_starter_pack_cover_page.webp"
                 alt="Free Starter Pack Printable Workbook Cover"
@@ -101,7 +101,7 @@ export function FreeSampleSection() {
                 <button
                   type="submit"
                   disabled={status === 'loading'}
-                  className="px-7 py-3.5 rounded-2xl bg-charcoal hover:bg-charcoal/90 text-white font-heading font-semibold text-sm tracking-wide transition-all shrink-0 active:scale-95 disabled:opacity-50 shadow-xs"
+                  className="px-7 py-3.5 rounded-2xl bg-charcoal hover:bg-charcoal/90 text-white font-heading font-semibold text-sm tracking-wide transition-all duration-200 shrink-0 shadow-xs hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-50 disabled:hover:translate-y-0"
                 >
                   {status === 'loading' ? 'Sending...' : 'Get Free Sample'}
                 </button>

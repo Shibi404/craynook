@@ -117,7 +117,7 @@ export function CartDrawer() {
               <button
                 onClick={() => checkout()}
                 disabled={isCheckingOut}
-                className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-md shadow-coral/20 transition-all hover:scale-[1.01] active:scale-[0.99] disabled:opacity-60 flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2"
               >
                 {isCheckingOut ? (
                   <span>Preparing Checkout...</span>

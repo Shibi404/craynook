@@ -61,7 +61,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
 
               <Link
                 href={`/products/${bundle.slug}`}
-                className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-md shadow-coral/20 transition-all hover:scale-[1.01] inline-flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-6 py-3 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 inline-flex items-center justify-center gap-2"
               >
                 <span>View Bundle</span>
                 <ArrowRightIcon size={16} />
@@ -72,7 +72,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
           {/* Right Visual */}
           <Link
             href={`/products/${bundle.slug}`}
-            className="w-56 sm:w-64 aspect-4/5 rounded-2xl overflow-hidden shadow-md bg-white hover:scale-[1.02] transition-transform shrink-0"
+            className="w-56 sm:w-64 aspect-4/5 rounded-2xl overflow-hidden shadow-md hover:shadow-xl bg-white transition-shadow duration-300 shrink-0"
           >
             <BookCoverSvg slug={bundle.slug} title={bundle.title} />
           </Link>

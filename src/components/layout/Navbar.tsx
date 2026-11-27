@@ -66,7 +66,7 @@ export function Navbar() {
           {/* Cart Button */}
           <button
             onClick={openCart}
-            className="relative flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border-warm hover:border-coral/50 text-charcoal font-heading font-semibold text-sm shadow-xs hover:shadow-sm transition-all active:scale-95"
+            className="relative flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border-warm hover:border-coral/50 text-charcoal font-heading font-semibold text-sm shadow-xs hover:shadow-sm transition-all duration-200 active:opacity-90"
             aria-label={`View cart, ${cartCount} items`}
           >
             <CartIcon size={18} className="text-coral" />

@@ -25,14 +25,14 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <Link
                 href="/#shop"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-base shadow-md shadow-coral/20 transition-all hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2"
               >
                 <span>Shop Workbooks</span>
                 <ArrowRightIcon size={16} />
               </Link>
               <Link
                 href="/#free-sample"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-cream border border-border-warm text-charcoal font-heading font-semibold text-base transition-all hover:scale-[1.01] flex items-center justify-center"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-cream/90 border border-border-warm hover:border-charcoal/25 text-charcoal font-heading font-semibold text-base shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center"
               >
                 Free 8-Page Sample
               </Link>

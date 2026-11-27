@@ -49,7 +49,7 @@ export function ProductCard({ product }: ProductCardProps) {
             )}
           </div>
 
-          <span className="text-xs font-heading font-semibold text-coral flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+          <span className="text-xs font-heading font-semibold text-coral flex items-center gap-1">
             <span>View</span>
             <ArrowRightIcon size={13} />
           </span>
