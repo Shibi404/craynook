@@ -37,12 +37,12 @@ export function ProductDetails({ product }: ProductDetailsProps) {
 
       {/* Pricing */}
       <div className="flex items-baseline gap-2.5">
-        <span className="font-heading font-bold text-3xl text-charcoal">
-          ${product.price.toFixed(2)}
+        <span className="font-body font-bold text-3xl text-charcoal tracking-tight">
+          ${product.price}
         </span>
         {product.compareAtPrice && (
-          <span className="text-sm text-muted line-through">
-            ${product.compareAtPrice.toFixed(2)}
+          <span className="font-body text-base font-medium text-muted/50 line-through">
+            ${product.compareAtPrice}
           </span>
         )}
       </div>

@@ -51,10 +51,10 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
             {/* Pricing & Link */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <div className="flex items-baseline gap-2">
-                <span className="font-heading font-bold text-3xl text-charcoal">
+                <span className="font-body font-bold text-3xl text-charcoal">
                   $15
                 </span>
-                <span className="text-sm text-muted line-through">
+                <span className="font-body text-sm font-medium text-muted/50 line-through">
                   $29
                 </span>
               </div>
