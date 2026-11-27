@@ -2,7 +2,6 @@ import { Product, FilterCategory } from '@/types/product';
 
 export const CATEGORIES: FilterCategory[] = [
   'All',
-  'Bundles',
   'Alphabet',
   'Math',
   'Coloring',

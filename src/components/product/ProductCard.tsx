@@ -11,7 +11,7 @@ export function ProductCard({ product }: ProductCardProps) {
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="group flex flex-col transition-all duration-200"
+      className="group flex flex-col w-full h-full transition-all duration-200"
     >
       {/* Cover Image */}
       <div className="relative aspect-4/5 w-full rounded-2xl overflow-hidden shadow-sm group-hover:shadow-md group-hover:-translate-y-0.5 transition-all duration-200 bg-cream/30">

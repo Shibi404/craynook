@@ -9,12 +9,13 @@ import { FaqAccordion } from '@/components/home/FaqAccordion';
 
 export default function HomePage() {
   const bundle = PRODUCTS.find((p) => p.isBundle) || PRODUCTS[PRODUCTS.length - 1];
+  const workbooks = PRODUCTS.filter((p) => !p.isBundle);
 
   return (
     <div className="flex flex-col">
       <Hero />
       <FeaturedBundle bundle={bundle} />
-      <ProductGrid products={PRODUCTS} />
+      <ProductGrid products={workbooks} />
       <HowItWorks />
       <FreeSampleSection />
       <FaqAccordion />

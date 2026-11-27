@@ -12,10 +12,17 @@ interface ProductGridProps {
 export function ProductGrid({ products }: ProductGridProps) {
   const [activeCategory, setActiveCategory] = useState<FilterCategory>('All');
 
+  // Display only individual workbooks in this section
+  const workbooks = products.filter((p) => !p.isBundle);
+
+  const availableCategories = CATEGORIES.filter(
+    (cat) => cat === 'All' || workbooks.some((p) => p.category === cat)
+  );
+
   const filteredProducts =
     activeCategory === 'All'
-      ? products
-      : products.filter((p) => p.category === activeCategory);
+      ? workbooks
+      : workbooks.filter((p) => p.category === activeCategory);
 
   return (
     <section id="shop" className="py-14 md:py-20 bg-white border-t border-border-warm">
@@ -28,7 +35,7 @@ export function ProductGrid({ products }: ProductGridProps) {
 
           {/* Filter Pills */}
           <div className="flex items-center flex-wrap gap-1.5">
-            {CATEGORIES.map((cat) => {
+            {availableCategories.map((cat) => {
               const isActive = activeCategory === cat;
               return (
                 <button
@@ -47,10 +54,15 @@ export function ProductGrid({ products }: ProductGridProps) {
           </div>
         </div>
 
-        {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Product Cards: Centers items on incomplete rows (e.g. the 2 books on row 2) */}
+        <div className="flex flex-wrap justify-center gap-6">
           {filteredProducts.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div
+              key={product.id}
+              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc((100%-48px)/3)] max-w-sm sm:max-w-none flex flex-col"
+            >
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>
