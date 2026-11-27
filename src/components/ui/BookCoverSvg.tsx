@@ -27,87 +27,17 @@ function renderCover(slug: string, className: string, title?: string) {
   switch (slug) {
     case 'alphabet-tracing-phonics-workbook':
       return (
-        <svg
-          viewBox="0 0 400 520"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-full h-full select-none ${className}`}
-          aria-label={title || 'Alphabet Tracing & Phonics Workbook Cover'}
-        >
-          {/* Solid Edge-to-Edge Cover */}
-          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
-          
-          {/* Header Banner */}
-          <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF0ED" />
-          <text x="200" y="58" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            CRAYNOOK • EARLY LITERACY
-          </text>
-
-          {/* Title Box */}
-          <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
-            Alphabet Tracing
-          </text>
-          <text x="200" y="142" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="19">
-            & Phonics Workbook
-          </text>
-          <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            Uppercase & Lowercase Letter Strokes • Phonics Sounds
-          </text>
-
-          {/* Central Artwork: Giant Tracing "Aa" with stroke arrows */}
-          <g transform="translate(60, 185)">
-            {/* Guide Grid */}
-            <line x1="0" y1="20" x2="280" y2="20" stroke="#EAE4DC" strokeWidth="1.5" strokeDasharray="4 4" />
-            <line x1="0" y1="100" x2="280" y2="100" stroke="#7A9E7E" strokeWidth="1.5" strokeDasharray="5 5" opacity="0.6" />
-            <line x1="0" y1="180" x2="280" y2="180" stroke="#EAE4DC" strokeWidth="1.5" />
-
-            {/* Letter A */}
-            <path d="M70 170L110 30L150 170" stroke="#E86F51" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" fill="none" opacity="0.9" />
-            <line x1="88" y1="120" x2="132" y2="120" stroke="#E86F51" strokeWidth="12" strokeLinecap="round" />
-            
-            {/* Tracing Dotted Inset */}
-            <path d="M70 170L110 30L150 170" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="6 6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-            <line x1="88" y1="120" x2="132" y2="120" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="4 4" strokeLinecap="round" />
-
-            {/* Direction Arrows */}
-            <circle cx="68" cy="172" r="7" fill="#E9B44C" />
-            <text x="68" y="176" textAnchor="middle" fill="#2D2A26" fontSize="9" fontWeight="bold">1</text>
-            <circle cx="152" cy="172" r="7" fill="#E9B44C" />
-            <text x="152" y="176" textAnchor="middle" fill="#2D2A26" fontSize="9" fontWeight="bold">2</text>
-
-            {/* Letter a */}
-            <circle cx="210" cy="125" r="38" stroke="#7A9E7E" strokeWidth="12" fill="none" opacity="0.9" />
-            <line x1="248" y1="88" x2="248" y2="165" stroke="#7A9E7E" strokeWidth="12" strokeLinecap="round" />
-            <circle cx="210" cy="125" r="38" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="6 6" fill="none" />
-            <line x1="248" y1="88" x2="248" y2="165" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="5 5" strokeLinecap="round" />
-
-            {/* Cute Apple Phonics Icon */}
-            <g transform="translate(18, 115)">
-              <circle cx="16" cy="18" r="14" fill="#E86F51" />
-              <path d="M16 4C18 1 21 0 23 2C21 5 19 6 16 6" fill="#7A9E7E" />
-              <path d="M16 6V10" stroke="#2D2A26" strokeWidth="2" strokeLinecap="round" />
-              <circle cx="12" cy="15" r="2" fill="#FFFFFF" opacity="0.6" />
-            </g>
-          </g>
-
-          {/* Badges Footer Strip */}
-          <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF0ED" />
-            <text x="48" y="21" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              ALPHABET
-            </text>
-
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
-            <text x="160" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              48 PAGES
-            </text>
-
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF8EE" />
-            <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              US LETTER & A4
-            </text>
-          </g>
-        </svg>
+        <div className={`relative w-full h-full overflow-hidden ${className}`}>
+          <Image
+            src="/alphabet_tracing_workbook.png"
+            alt={title || 'Alphabet Tracing & Phonics Workbook Cover'}
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            priority
+          />
+        </div>
       );
 
     case 'numbers-early-math-workbook':

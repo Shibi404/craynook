@@ -22,7 +22,7 @@ export const PRODUCTS: Product[] = [
     pageCount: 48,
     category: 'Alphabet',
     formats: ['US Letter (8.5×11")', 'A4'],
-    coverImage: '/covers/alphabet-tracing.svg',
+    coverImage: '/alphabet_tracing_workbook.png',
     previewImages: [
       '/previews/alphabet-tracing-p1.svg',
       '/previews/alphabet-tracing-p2.svg',
