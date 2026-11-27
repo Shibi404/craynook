@@ -48,7 +48,7 @@ export function FreeSampleSection() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
           {/* Cover Presentation: Substantial, realistic book presentation */}
           <div className="md:col-span-5 flex justify-center">
-            <div className="relative w-60 sm:w-72 md:w-80 aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-charcoal/10 hover:shadow-charcoal/20 bg-white transition-shadow duration-300">
+            <div className="relative w-60 sm:w-72 md:w-80 aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-charcoal/10 hover:shadow-charcoal/20 hover:-translate-y-1 bg-white transition-all duration-300 ease-out">
               <Image
                 src="/free_starter_pack_cover_page.webp"
                 alt="Free Starter Pack Printable Workbook Cover"
