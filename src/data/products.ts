@@ -52,7 +52,7 @@ export const PRODUCTS: Product[] = [
     pageCount: 52,
     category: 'Math',
     formats: ['US Letter (8.5×11")', 'A4'],
-    coverImage: '/covers/numbers-math.svg',
+    coverImage: '/numbers_early_math_cover_page.png',
     previewImages: [
       '/previews/numbers-math-p1.svg',
       '/previews/numbers-math-p2.svg',

@@ -42,83 +42,16 @@ function renderCover(slug: string, className: string, title?: string) {
 
     case 'numbers-early-math-workbook':
       return (
-        <svg
-          viewBox="0 0 400 520"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-full h-full select-none ${className}`}
-          aria-label={title || 'Numbers & Early Math Workbook Cover'}
-        >
-          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
-          
-          <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
-          <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            CRAYNOOK • EARLY NUMERACY
-          </text>
-
-          <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
-            Numbers & Early Math
-          </text>
-          <text x="200" y="142" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="19">
-            Counting & Tracing 1 to 20
-          </text>
-          <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            Ten-Frames • Shape Tracing • Finger Counting
-          </text>
-
-          {/* Central Artwork: Digits 1 2 3 + Ten-Frame */}
-          <g transform="translate(60, 190)">
-            {/* Number 1 */}
-            <g transform="translate(10, 0)">
-              <path d="M15 45L30 30V150" stroke="#E9B44C" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <path d="M15 45L30 30V150" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="5 5" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <line x1="10" y1="150" x2="50" y2="150" stroke="#E9B44C" strokeWidth="14" strokeLinecap="round" />
-            </g>
-
-            {/* Number 2 */}
-            <g transform="translate(95, 0)">
-              <path d="M10 50C10 25 50 25 50 55C50 85 10 120 10 150H55" stroke="#7A9E7E" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <path d="M10 50C10 25 50 25 50 55C50 85 10 120 10 150H55" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="5 5" strokeLinecap="round" fill="none" />
-            </g>
-
-            {/* Number 3 */}
-            <g transform="translate(195, 0)">
-              <path d="M10 35H50L30 85C45 85 55 98 55 118C55 138 38 150 10 148" stroke="#E86F51" strokeWidth="14" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-              <path d="M10 35H50L30 85C45 85 55 98 55 118C55 138 38 150 10 148" stroke="#FFFFFF" strokeWidth="3" strokeDasharray="5 5" strokeLinecap="round" fill="none" />
-            </g>
-
-            {/* Ten-Frame Counter Box */}
-            <g transform="translate(15, 175)">
-              <rect x="0" y="0" width="250" height="35" rx="6" fill="#FDF8EE" />
-              <line x1="50" y1="0" x2="50" y2="35" stroke="#EAE4DC" />
-              <line x1="100" y1="0" x2="100" y2="35" stroke="#EAE4DC" />
-              <line x1="150" y1="0" x2="150" y2="35" stroke="#EAE4DC" />
-              <line x1="200" y1="0" x2="200" y2="35" stroke="#EAE4DC" />
-              <circle cx="25" cy="17.5" r="10" fill="#E86F51" />
-              <circle cx="75" cy="17.5" r="10" fill="#7A9E7E" />
-              <circle cx="125" cy="17.5" r="10" fill="#E9B44C" />
-              <circle cx="175" cy="17.5" r="10" fill="#6DAEDB" />
-              <circle cx="225" cy="17.5" r="10" fill="#2D2A26" opacity="0.2" />
-            </g>
-          </g>
-
-          <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" />
-            <text x="48" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              EARLY MATH
-            </text>
-
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
-            <text x="160" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              52 PAGES
-            </text>
-
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" />
-            <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              US LETTER & A4
-            </text>
-          </g>
-        </svg>
+        <div className={`relative w-full h-full overflow-hidden ${className}`}>
+          <Image
+            src="/numbers_early_math_cover_page.png"
+            alt={title || 'Numbers & Early Math Workbook Cover'}
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
       );
 
     case 'pre-writing-scissor-skills-pack':
