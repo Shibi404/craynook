@@ -20,7 +20,7 @@ export function Navbar() {
         >
           <CrayNookLogo size={38} className="transition-transform group-hover:scale-105" />
           <div className="flex flex-col">
-            <span className="font-heading font-bold text-2xl text-charcoal tracking-tight group-hover:text-coral transition-colors">
+            <span className="font-heading font-medium text-2xl text-charcoal tracking-tight group-hover:text-coral transition-colors">
               Cray<span className="text-coral">Nook</span>
             </span>
             <span className="text-[10px] font-semibold text-muted tracking-wider uppercase -mt-1 hidden sm:block">

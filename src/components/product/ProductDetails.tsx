@@ -26,7 +26,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           <span>US Letter &amp; A4</span>
         </div>
 
-        <h1 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal tracking-tight">
+        <h1 className="font-heading font-medium text-2xl sm:text-3xl text-charcoal tracking-tight">
           {product.title}
         </h1>
 

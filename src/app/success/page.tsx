@@ -32,7 +32,7 @@ function SuccessContent() {
         </div>
 
         <div className="space-y-2">
-          <h1 className="font-heading font-bold text-3xl sm:text-4xl text-charcoal">
+          <h1 className="font-heading font-medium text-3xl sm:text-4xl text-charcoal tracking-tight">
             Thank You for Your Order!
           </h1>
           <p className="text-muted text-sm sm:text-base">

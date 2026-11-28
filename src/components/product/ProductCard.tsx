@@ -31,7 +31,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </span>
 
         {/* Title */}
-        <h3 className="font-heading font-semibold text-base text-charcoal group-hover:text-coral transition-colors line-clamp-1">
+        <h3 className="font-heading font-medium text-base text-charcoal group-hover:text-coral transition-colors line-clamp-1">
           {product.title}
         </h3>
 

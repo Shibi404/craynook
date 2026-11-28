@@ -23,7 +23,7 @@ export function HowItWorks() {
     <section id="how-it-works" className="py-16 md:py-24 bg-cream/40 border-t border-border-warm">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 border-b border-border-warm pb-5">
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal tracking-tight">
+          <h2 className="font-heading font-medium text-2xl sm:text-3xl text-charcoal tracking-tight">
             How it works
           </h2>
           <span className="text-xs text-muted font-medium">
@@ -34,10 +34,10 @@ export function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {steps.map((step, idx) => (
             <div key={idx} className="space-y-3">
-              <span className="font-heading font-bold text-3xl sm:text-4xl text-charcoal/20 select-none block">
+              <span className="font-heading font-medium text-3xl sm:text-4xl text-charcoal/20 select-none block">
                 {step.num}
               </span>
-              <h3 className="font-heading font-bold text-lg text-charcoal">
+              <h3 className="font-heading font-medium text-lg text-charcoal">
                 {step.title}
               </h3>
               <p className="text-sm text-muted leading-relaxed font-normal">

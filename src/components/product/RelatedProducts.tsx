@@ -13,7 +13,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
     <section className="py-16 bg-cream/40 border-t border-border-warm">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         <div className="text-center space-y-2">
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
+          <h2 className="font-heading font-medium text-2xl sm:text-3xl text-charcoal tracking-tight">
             You Might Also Love
           </h2>
           <p className="text-muted text-sm">

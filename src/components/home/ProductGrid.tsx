@@ -29,7 +29,7 @@ export function ProductGrid({ products }: ProductGridProps) {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
         {/* Clean Header & Filters */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 border-b border-border-warm pb-5">
-          <h2 className="font-heading font-bold text-2xl sm:text-3xl text-charcoal">
+          <h2 className="font-heading font-medium text-2xl sm:text-3xl text-charcoal tracking-tight">
             Workbooks
           </h2>
 

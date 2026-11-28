@@ -62,7 +62,7 @@ export function CartDrawer() {
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-border-warm flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <h2 className="font-heading font-bold text-base text-charcoal">
+              <h2 className="font-heading font-medium text-base text-charcoal">
                 Cart
               </h2>
               {cartCount > 0 && (

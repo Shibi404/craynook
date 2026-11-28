@@ -11,7 +11,7 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <Link href="/" className="flex items-center gap-2">
               <CrayNookLogo size={28} />
-              <span className="font-heading font-bold text-lg text-charcoal">
+              <span className="font-heading font-medium text-lg text-charcoal">
                 Cray<span className="text-coral">Nook</span>
               </span>
             </Link>

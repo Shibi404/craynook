@@ -67,7 +67,7 @@ export function FreeSampleSection() {
             </span>
 
             <div className="space-y-3">
-              <h2 className="font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-charcoal tracking-tight leading-[1.12]">
+              <h2 className="font-heading font-medium text-3xl sm:text-4xl lg:text-5xl text-charcoal tracking-tight leading-[1.12]">
                 Try a few pages first.
               </h2>
               <p className="text-base sm:text-lg text-muted leading-relaxed max-w-lg mx-auto md:mx-0 font-normal">

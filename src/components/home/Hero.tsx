@@ -63,7 +63,7 @@ export function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Main Column: Copy, Mobile Covers, & CTAs */}
           <div className="lg:col-span-6 space-y-6 text-center lg:text-left">
-            <h1 className="font-heading font-bold text-4xl sm:text-5xl lg:text-6xl text-charcoal tracking-tight leading-[1.15]">
+            <h1 className="font-heading font-medium text-4xl sm:text-5xl lg:text-6xl text-charcoal tracking-tight leading-[1.15]">
               Screen-free workbooks for{' '}
               <span className="text-coral">little learners.</span>
             </h1>
