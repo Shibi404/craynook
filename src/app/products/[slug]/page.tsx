@@ -1,12 +1,10 @@
 import React, { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { PRODUCTS, getProductBySlug, getRelatedProducts } from '@/data/products';
 import { ProductGallery } from '@/components/product/ProductGallery';
 import { ProductDetails } from '@/components/product/ProductDetails';
 import { RelatedProducts } from '@/components/product/RelatedProducts';
-import { ChevronRightIcon } from '@/components/ui/Icons';
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -75,23 +73,6 @@ async function ProductContent({ params }: PageProps) {
 
   return (
     <div className="bg-white">
-      {/* Breadcrumbs */}
-      <div className="border-b border-border-warm bg-cream/40">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center gap-2 text-xs text-muted">
-          <Link href="/" className="hover:text-coral transition-colors font-medium">
-            Home
-          </Link>
-          <ChevronRightIcon size={12} />
-          <Link href="/#shop" className="hover:text-coral transition-colors font-medium">
-            Workbooks
-          </Link>
-          <ChevronRightIcon size={12} />
-          <span className="text-charcoal font-semibold truncate max-w-[200px] sm:max-w-none">
-            {product.title}
-          </span>
-        </div>
-      </div>
-
       {/* Main Product Showcase */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-start">
@@ -116,7 +97,6 @@ async function ProductContent({ params }: PageProps) {
 function ProductPageSkeleton() {
   return (
     <div className="min-h-screen bg-white">
-      <div className="border-b border-border-warm bg-cream/40 h-11" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 animate-pulse">
           <div className="lg:col-span-6 aspect-4/5 rounded-3xl bg-cream/50" />
