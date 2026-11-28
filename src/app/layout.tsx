@@ -6,7 +6,6 @@ import { CartProvider } from '@/context/CartContext';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
-import { ToastContainer } from '@/components/ui/Toast';
 
 const fredoka = Fredoka({
   variable: '--font-fredoka',
@@ -68,7 +67,6 @@ export default function RootLayout({
             <main className="flex-1">{children}</main>
             <Footer />
             <CartDrawer />
-            <ToastContainer />
           </CartProvider>
         </ToastProvider>
       </body>

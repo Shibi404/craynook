@@ -7,7 +7,6 @@ import React, {
   useEffect,
   useCallback,
   useMemo,
-  useRef,
 } from 'react';
 import { Product } from '@/types/product';
 import { CartItem, CheckoutRequestPayload, CheckoutResponse } from '@/types/cart';
@@ -39,11 +38,6 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [isHydrated, setIsHydrated] = useState(false);
   const { showToast } = useToast();
-  const itemsRef = useRef(items);
-
-  useEffect(() => {
-    itemsRef.current = items;
-  }, [items]);
 
   // Load from localStorage on client mount
   useEffect(() => {
@@ -91,25 +85,16 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         return [...prev, { product, quantity }];
       });
 
-      showToast(
-        'Added to your cart!',
-        `${product.title} is ready for instant download.`,
-        'success'
-      );
       setIsOpen(true);
     },
-    [showToast]
+    []
   );
 
   const removeItem = useCallback(
     (productId: string) => {
-      const found = itemsRef.current.find((item) => item.product.id === productId);
-      if (found) {
-        showToast('Removed from cart', found.product.title, 'info');
-      }
       setItems((prev) => prev.filter((item) => item.product.id !== productId));
     },
-    [showToast]
+    []
   );
 
   const updateQuantity = useCallback(
