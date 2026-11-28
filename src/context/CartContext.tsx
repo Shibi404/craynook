@@ -71,18 +71,13 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const toggleCart = useCallback(() => setIsOpen((prev) => !prev), []);
 
   const addItem = useCallback(
-    (product: Product, quantity = 1) => {
+    (product: Product) => {
       setItems((prev) => {
-        const existingIndex = prev.findIndex((item) => item.product.id === product.id);
-        if (existingIndex > -1) {
-          const updated = [...prev];
-          updated[existingIndex] = {
-            ...updated[existingIndex],
-            quantity: updated[existingIndex].quantity + quantity,
-          };
-          return updated;
+        const exists = prev.some((item) => item.product.id === product.id);
+        if (exists) {
+          return prev;
         }
-        return [...prev, { product, quantity }];
+        return [...prev, { product, quantity: 1 }];
       });
 
       setIsOpen(true);
@@ -117,14 +112,11 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const cartCount = useMemo(() => {
-    return items.reduce((total, item) => total + item.quantity, 0);
+    return items.length;
   }, [items]);
 
   const cartSubtotal = useMemo(() => {
-    return items.reduce(
-      (total, item) => total + item.product.price * item.quantity,
-      0
-    );
+    return items.reduce((total, item) => total + item.product.price, 0);
   }, [items]);
 
   const checkout = useCallback(
