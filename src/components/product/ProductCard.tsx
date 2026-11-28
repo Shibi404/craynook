@@ -26,25 +26,26 @@ export function ProductCard({ product }: ProductCardProps) {
 
       {/* Info Content */}
       <div className="flex flex-col flex-1 pt-3">
+        {/* Category & Page Count at top as before */}
         <span className="text-[11px] text-muted font-medium mb-1">
           {product.category} · {product.pageCount} pages
         </span>
 
-        {/* Title */}
-        <h3 className="font-heading font-medium text-base text-charcoal group-hover:text-coral transition-colors line-clamp-1">
-          {product.title}
-        </h3>
-
-        {/* Pricing: Clean, prominent Plus Jakarta Sans numerals */}
-        <div className="flex items-baseline gap-2 pt-2.5 mt-auto">
-          <span className="font-body font-bold text-2xl text-charcoal tracking-tight">
-            ${product.price}
-          </span>
-          {product.compareAtPrice && (
-            <span className="font-body text-sm font-medium text-muted/50 line-through">
-              ${product.compareAtPrice}
+        {/* Title below, with Price on the right */}
+        <div className="flex items-baseline justify-between gap-2.5 mt-auto">
+          <h3 className="font-heading font-medium text-base text-charcoal group-hover:text-coral transition-colors line-clamp-1 flex-1">
+            {product.title}
+          </h3>
+          <div className="flex items-baseline gap-1.5 shrink-0">
+            {product.compareAtPrice && (
+              <span className="font-body text-xs font-medium text-muted/50 line-through">
+                ${product.compareAtPrice}
+              </span>
+            )}
+            <span className="font-body font-bold text-xl sm:text-2xl text-charcoal tracking-tight">
+              ${product.price}
             </span>
-          )}
+          </div>
         </div>
       </div>
     </Link>

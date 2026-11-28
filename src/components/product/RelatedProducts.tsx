@@ -21,9 +21,14 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-8 sm:gap-y-10 lg:gap-y-14">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <div
+              key={product.id}
+              className="flex flex-col pb-8 border-b border-border-warm last:border-b-0 last:pb-0 sm:pb-0 sm:border-b-0"
+            >
+              <ProductCard product={product} />
+            </div>
           ))}
         </div>
       </div>

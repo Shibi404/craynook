@@ -55,11 +55,11 @@ export function ProductGrid({ products }: ProductGridProps) {
         </div>
 
         {/* Product Cards: Centers items on incomplete rows (e.g. the 2 books on row 2) */}
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="flex flex-wrap justify-center gap-x-8 gap-y-8 sm:gap-y-10 lg:gap-y-14">
           {filteredProducts.map((product) => (
             <div
               key={product.id}
-              className="w-full sm:w-[calc(50%-12px)] lg:w-[calc((100%-48px)/3)] max-w-sm sm:max-w-none flex flex-col"
+              className="w-full sm:w-[calc(50%-16px)] lg:w-[calc((100%-64px)/3)] max-w-sm sm:max-w-none flex flex-col pb-8 border-b border-border-warm last:border-b-0 last:pb-0 sm:pb-0 sm:border-b-0"
             >
               <ProductCard product={product} />
             </div>
