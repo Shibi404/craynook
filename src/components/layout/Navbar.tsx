@@ -66,13 +66,16 @@ export function Navbar() {
           {/* Cart Button */}
           <button
             onClick={openCart}
-            className="relative flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border-warm hover:border-coral/50 text-charcoal font-heading font-semibold text-sm shadow-xs hover:shadow-sm transition-all duration-200 active:opacity-90"
+            className="group relative flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-border-warm hover:border-coral/50 text-charcoal font-heading font-semibold text-sm shadow-xs hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 active:scale-95 transition-all duration-200 cursor-pointer"
             aria-label={`View cart, ${cartCount} items`}
           >
-            <CartIcon size={18} className="text-coral" />
+            <CartIcon
+              size={18}
+              className="text-coral group-hover:scale-110 transition-transform duration-200"
+            />
             <span className="hidden sm:inline">Cart</span>
             {cartCount > 0 && (
-              <span className="flex items-center justify-center min-w-5 h-5 px-1.5 text-xs font-bold text-white bg-coral rounded-full animate-bounce-subtle">
+              <span className="flex items-center justify-center min-w-5 h-5 px-1.5 text-xs font-bold text-white bg-coral rounded-full group-hover:scale-105 transition-transform duration-200">
                 {cartCount}
               </span>
             )}

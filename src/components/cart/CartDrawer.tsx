@@ -33,22 +33,31 @@ export function CartDrawer() {
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
-
   return (
-    <div className="fixed inset-0 z-50 overflow-hidden" role="dialog" aria-modal="true">
-      {/* Backdrop */}
+    <div
+      className={`fixed inset-0 z-50 overflow-hidden ${
+        isOpen ? 'pointer-events-auto' : 'pointer-events-none'
+      }`}
+      role="dialog"
+      aria-modal={isOpen}
+      aria-hidden={!isOpen}
+    >
+      {/* Backdrop with smooth fade */}
       <div
-        className="fixed inset-0 bg-charcoal/25 backdrop-blur-2xs transition-opacity duration-200"
+        className={`fixed inset-0 bg-charcoal/35 backdrop-blur-xs transition-opacity duration-300 ease-in-out ${
+          isOpen ? 'opacity-100' : 'opacity-0'
+        }`}
         onClick={closeCart}
         aria-hidden="true"
       />
 
-      {/* Drawer Panel */}
-      <div className="fixed inset-y-0 right-0 flex max-w-full pl-10">
+      {/* Drawer Panel Container (Anchored to Right) */}
+      <div className="fixed inset-y-0 right-0 flex max-w-full pl-10 pointer-events-none">
         <div
           ref={drawerRef}
-          className="w-screen max-w-md bg-white shadow-xl flex flex-col border-l border-border-warm animate-slide-left"
+          className={`w-screen max-w-md bg-white shadow-2xl flex flex-col border-l border-border-warm pointer-events-auto transition-transform duration-300 ease-in-out transform ${
+            isOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
         >
           {/* Header */}
           <div className="p-4 sm:p-5 border-b border-border-warm flex items-center justify-between">
@@ -64,7 +73,7 @@ export function CartDrawer() {
             </div>
             <button
               onClick={closeCart}
-              className="p-1.5 text-muted hover:text-charcoal rounded-full hover:bg-cream transition-colors"
+              className="p-1.5 text-muted hover:text-charcoal rounded-full hover:bg-cream transition-colors cursor-pointer"
               aria-label="Close cart"
             >
               <CloseIcon size={18} />
@@ -73,7 +82,7 @@ export function CartDrawer() {
 
           {/* Delivery notice */}
           <div className="bg-cream/60 px-5 py-2 border-b border-border-warm text-[11px] text-muted font-medium">
-            Instant PDF email delivery • US Letter &amp; A4
+            Instant PDF email delivery • No account required
           </div>
 
           {/* Items or Empty state */}
@@ -88,7 +97,7 @@ export function CartDrawer() {
                 </h3>
                 <button
                   onClick={closeCart}
-                  className="px-5 py-2 rounded-full bg-cream hover:bg-coral hover:text-white text-charcoal font-heading font-semibold text-xs border border-border-warm transition-all"
+                  className="px-5 py-2 rounded-full bg-cream hover:bg-coral hover:text-white text-charcoal font-heading font-semibold text-xs border border-border-warm hover:-translate-y-0.5 active:translate-y-0 transition-all cursor-pointer"
                 >
                   Shop Workbooks
                 </button>
@@ -117,7 +126,7 @@ export function CartDrawer() {
               <button
                 onClick={() => checkout()}
                 disabled={isCheckingOut}
-                className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-sm shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2 cursor-pointer"
               >
                 {isCheckingOut ? (
                   <span>Preparing Checkout...</span>
