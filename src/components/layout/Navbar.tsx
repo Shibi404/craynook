@@ -42,8 +42,8 @@ export function Navbar() {
             className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading flex items-center gap-1.5"
           >
             <span>Bundles</span>
-            <span className="bg-coral-light text-coral text-[10px] font-bold px-2 py-0.5 rounded-full">
-              Save 48%
+            <span className="bg-cream text-charcoal text-[10px] font-bold px-2 py-0.5 rounded-full border border-border-warm">
+              5-in-1
             </span>
           </Link>
           <Link
@@ -125,8 +125,8 @@ export function Navbar() {
             className="flex items-center justify-between px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
             <span>The Preschool Bundle</span>
-            <span className="bg-coral-light text-coral text-xs font-bold px-2 py-0.5 rounded-full">
-              Save 48%
+            <span className="bg-cream text-charcoal text-xs font-bold px-2 py-0.5 rounded-full border border-border-warm">
+              5-in-1
             </span>
           </Link>
           <Link

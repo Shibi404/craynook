@@ -124,7 +124,7 @@ function renderCover(
           <g transform="translate(245, 12)">
             <path d="M0 0H120V38L60 28L0 38V0Z" fill="#E86F51" />
             <text x="60" y="18" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-fredoka)" fontWeight="700" fontSize="11" letterSpacing="1">
-              SAVE 48%
+              5-IN-1
             </text>
           </g>
 
@@ -141,7 +141,7 @@ function renderCover(
             5-in-1 Printable Bundle
           </text>
           <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            228 Total Pages • 5 Core Workbooks • Print Unlimited Times
+            120 Total Pages • 5 Core Workbooks • Print Unlimited Times
           </text>
 
           {/* Central Artwork: 5 mini book badges displayed harmoniously */}
@@ -175,17 +175,17 @@ function renderCover(
           <g transform="translate(35, 435)">
             <rect x="0" y="0" width="100" height="34" rx="8" fill="#FDF0ED" />
             <text x="50" y="21" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              BEST VALUE
+              ALL 5 BOOKS
             </text>
 
             <rect x="114" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
             <text x="164" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              228 PAGES
+              120 PAGES
             </text>
 
             <rect x="228" y="0" width="102" height="34" rx="8" fill="#FDF8EE" />
             <text x="279" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              $15 (WAS $29)
+              US LETTER & A4
             </text>
           </g>
         </svg>

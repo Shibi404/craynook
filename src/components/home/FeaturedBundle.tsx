@@ -24,7 +24,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
           {/* Left Details */}
           <div className="space-y-4 max-w-xl text-center lg:text-left">
             <div className="inline-block bg-coral-light text-coral font-heading font-bold text-xs px-3 py-1 rounded-full">
-              Best Value • Save 48%
+              All 5 Workbooks
             </div>
 
             <div>
@@ -32,7 +32,7 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
                 The Complete Preschool Bundle
               </h2>
               <p className="text-muted text-sm mt-1">
-                All 5 workbooks · 228 printable pages · Instant PDF
+                All 5 workbooks · 120 printable pages · Instant PDF
               </p>
             </div>
 
@@ -52,11 +52,13 @@ export function FeaturedBundle({ bundle }: FeaturedBundleProps) {
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
               <div className="flex items-baseline gap-2">
                 <span className="font-body font-bold text-3xl text-charcoal">
-                  $15
+                  ${bundle.price}
                 </span>
-                <span className="font-body text-sm font-medium text-muted/50 line-through">
-                  $29
-                </span>
+                {bundle.compareAtPrice && (
+                  <span className="font-body text-sm font-medium text-muted/50 line-through">
+                    ${bundle.compareAtPrice}
+                  </span>
+                )}
               </div>
 
               <Link
