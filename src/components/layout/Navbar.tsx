@@ -33,25 +33,25 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-8">
           <Link
             href="/#shop"
-            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading"
+            className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             Shop
           </Link>
           <Link
             href="/#bundle"
-            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading"
+            className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             Bundles
           </Link>
           <Link
             href="/#free-sample"
-            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading"
+            className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             Free Sample
           </Link>
           <Link
             href="/#faq"
-            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading"
+            className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             FAQ
           </Link>
