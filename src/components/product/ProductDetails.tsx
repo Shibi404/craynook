@@ -3,14 +3,14 @@
 import React from 'react';
 import { Product } from '@/types/product';
 import { useCart } from '@/context/CartContext';
-import { CartIcon, CheckIcon, ShieldCheckIcon, ArrowRightIcon } from '@/components/ui/Icons';
+import { CartIcon, CheckIcon } from '@/components/ui/Icons';
 
 interface ProductDetailsProps {
   product: Product;
 }
 
 export function ProductDetails({ product }: ProductDetailsProps) {
-  const { addItem, checkout, isCheckingOut } = useCart();
+  const { addItem } = useCart();
 
   return (
     <div className="space-y-6">
@@ -46,29 +46,13 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       </div>
 
       {/* Actions */}
-      <div className="space-y-2.5">
+      <div>
         <button
           onClick={() => addItem(product)}
-          className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-medium text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2"
+          className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-medium text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
         >
           <CartIcon size={18} />
           <span>Add to Cart</span>
-        </button>
-
-        <button
-          onClick={() => checkout({ product, quantity: 1 })}
-          disabled={isCheckingOut}
-          className="w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-cream/90 border border-border-warm hover:border-charcoal/25 text-charcoal font-heading font-medium text-base shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2"
-        >
-          {isCheckingOut ? (
-            <span>Connecting...</span>
-          ) : (
-            <>
-              <ShieldCheckIcon size={16} className="text-sage" />
-              <span>Buy Now (Instant Checkout)</span>
-              <ArrowRightIcon size={15} className="text-muted" />
-            </>
-          )}
         </button>
       </div>
 
