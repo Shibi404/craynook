@@ -82,7 +82,7 @@ export const PRODUCTS: Product[] = [
     pageCount: 44,
     category: 'Motor Skills',
     formats: ['US Letter (8.5×11")', 'A4'],
-    coverImage: '/covers/scissor-skills.svg',
+    coverImage: '/pre_writing_scissor_skills_cover_page.png',
     previewImages: [
       '/previews/scissor-skills-p1.svg',
       '/previews/scissor-skills-p2.svg',

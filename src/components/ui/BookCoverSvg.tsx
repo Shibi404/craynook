@@ -56,68 +56,16 @@ function renderCover(slug: string, className: string, title?: string) {
 
     case 'pre-writing-scissor-skills-pack':
       return (
-        <svg
-          viewBox="0 0 400 520"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-full h-full select-none ${className}`}
-          aria-label={title || 'Pre-Writing & Scissor Skills Pack Cover'}
-        >
-          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
-          
-          <rect x="30" y="32" width="340" height="42" rx="8" fill="#F0F5F1" />
-          <text x="200" y="58" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            CRAYNOOK • FINE MOTOR SKILLS
-          </text>
-
-          <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
-            Pre-Writing & Scissor Skills
-          </text>
-          <text x="200" y="142" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="19">
-            Cut, Trace, Paste & Fold
-          </text>
-          <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            Gentle Line Progression • Hand Strength • Bilateral Coordination
-          </text>
-
-          {/* Central Artwork: Scissors cutting along dashed line & wavy paths */}
-          <g transform="translate(50, 200)">
-            {/* Wavy line */}
-            <path d="M10 30Q80 0 150 30T290 30" stroke="#7A9E7E" strokeWidth="5" strokeLinecap="round" strokeDasharray="8 6" fill="none" />
-            
-            {/* Zig-Zag line */}
-            <path d="M10 90L60 60L120 110L180 60L240 110L290 70" stroke="#E86F51" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" strokeDasharray="8 6" fill="none" />
-
-            {/* Loop path */}
-            <path d="M10 160C80 120 80 200 150 160C220 120 220 200 290 160" stroke="#6DAEDB" strokeWidth="5" strokeLinecap="round" strokeDasharray="8 6" fill="none" />
-
-            {/* Cute Scissor Icon */}
-            <g transform="translate(245, 12)">
-              <circle cx="10" cy="10" r="8" fill="none" stroke="#2D2A26" strokeWidth="3" />
-              <circle cx="10" cy="30" r="8" fill="none" stroke="#2D2A26" strokeWidth="3" />
-              <line x1="16" y1="14" x2="45" y2="28" stroke="#7A9E7E" strokeWidth="4" strokeLinecap="round" />
-              <line x1="16" y1="26" x2="45" y2="12" stroke="#7A9E7E" strokeWidth="4" strokeLinecap="round" />
-              <circle cx="28" cy="20" r="3" fill="#2D2A26" />
-            </g>
-          </g>
-
-          <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#F0F5F1" />
-            <text x="48" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              SCISSORS
-            </text>
-
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#FDF8EE" />
-            <text x="160" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              44 PAGES
-            </text>
-
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" />
-            <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              US LETTER & A4
-            </text>
-          </g>
-        </svg>
+        <div className={`relative w-full h-full overflow-hidden ${className}`}>
+          <Image
+            src="/pre_writing_scissor_skills_cover_page.png"
+            alt={title || 'Pre-Writing & Scissor Skills Pack Cover'}
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        </div>
       );
 
     case 'dinosaur-adventure-coloring-book':
