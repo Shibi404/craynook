@@ -7,6 +7,7 @@ interface BookCoverSvgProps {
   previewIndex?: number;
   className?: string;
   title?: string;
+  priority?: boolean;
 }
 
 export function BookCoverSvg({
@@ -15,15 +16,21 @@ export function BookCoverSvg({
   previewIndex = 0,
   className = '',
   title,
+  priority = false,
 }: BookCoverSvgProps) {
   if (type === 'preview') {
     return renderPreviewPage(slug, previewIndex, className);
   }
 
-  return renderCover(slug, className, title);
+  return renderCover(slug, className, title, priority);
 }
 
-function renderCover(slug: string, className: string, title?: string) {
+function renderCover(
+  slug: string,
+  className: string,
+  title?: string,
+  priority: boolean = false
+) {
   switch (slug) {
     case 'alphabet-tracing-phonics-workbook':
       return (
@@ -35,7 +42,7 @@ function renderCover(slug: string, className: string, title?: string) {
             height={2400}
             className="w-full h-full object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            priority
+            priority={priority}
           />
         </div>
       );
@@ -50,6 +57,7 @@ function renderCover(slug: string, className: string, title?: string) {
             height={2400}
             className="w-full h-full object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            priority={priority}
           />
         </div>
       );
@@ -64,6 +72,7 @@ function renderCover(slug: string, className: string, title?: string) {
             height={2400}
             className="w-full h-full object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            priority={priority}
           />
         </div>
       );
@@ -78,6 +87,7 @@ function renderCover(slug: string, className: string, title?: string) {
             height={2400}
             className="w-full h-full object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            priority={priority}
           />
         </div>
       );
