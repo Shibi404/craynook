@@ -142,7 +142,7 @@ export const PRODUCTS: Product[] = [
     pageCount: 46,
     category: 'Motor Skills',
     formats: ['US Letter (8.5×11")', 'A4'],
-    coverImage: '/covers/logic-mazes.svg',
+    coverImage: '/logic_mazes_patterns_cover_page.png',
     previewImages: [
       '/previews/logic-mazes-p1.svg',
       '/previews/logic-mazes-p2.svg',

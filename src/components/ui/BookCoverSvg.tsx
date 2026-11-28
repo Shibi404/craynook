@@ -94,73 +94,17 @@ function renderCover(
 
     case 'preschool-logic-mazes-patterns':
       return (
-        <svg
-          viewBox="0 0 400 520"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-full h-full select-none ${className}`}
-          aria-label={title || 'Preschool Logic, Mazes & Patterns Cover'}
-        >
-          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
-          
-          <rect x="30" y="32" width="340" height="42" rx="8" fill="#FDF8EE" />
-          <text x="200" y="58" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="14" letterSpacing="2">
-            CRAYNOOK • CRITICAL THINKING
-          </text>
-
-          <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="26">
-            Logic, Mazes & Patterns
-          </text>
-          <text x="200" y="142" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="19">
-            Brain Games for Little Minds
-          </text>
-          <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            Wide-Path Mazes • Sequence Logic • Shadow Matching
-          </text>
-
-          {/* Central Artwork: Mini Maze & Pattern Blocks */}
-          <g transform="translate(60, 190)">
-            {/* Labyrinth Outlines */}
-            <rect x="20" y="10" width="240" height="150" rx="12" fill="#FAF8F5" stroke="#2D2A26" strokeWidth="3" />
-            
-            {/* Maze Walls */}
-            <path d="M70 10V80H120V120" stroke="#2D2A26" strokeWidth="3.5" strokeLinecap="round" />
-            <path d="M160 160V90H210" stroke="#2D2A26" strokeWidth="3.5" strokeLinecap="round" />
-            <path d="M120 40H220" stroke="#2D2A26" strokeWidth="3.5" strokeLinecap="round" />
-
-            {/* Solution Trail (Dotted) */}
-            <path d="M35 15H50V135H140V70H185V145H240" stroke="#E86F51" strokeWidth="4" strokeDasharray="5 5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="35" cy="15" r="6" fill="#7A9E7E" />
-            <circle cx="240" cy="145" r="6" fill="#E9B44C" />
-
-            {/* Pattern Row Below */}
-            <g transform="translate(25, 175)">
-              <circle cx="25" cy="15" r="14" fill="#E86F51" />
-              <rect x="65" y="1" width="28" height="28" rx="5" fill="#7A9E7E" />
-              <polygon points="130,2 145,28 115,28" fill="#E9B44C" />
-              <circle cx="180" cy="15" r="14" fill="#E86F51" />
-              <rect x="215" y="1" width="28" height="28" rx="5" fill="#FAF8F5" stroke="#2D2A26" strokeWidth="2" strokeDasharray="4 4" />
-              <text x="229" y="21" textAnchor="middle" fill="#E86F51" fontWeight="bold" fontSize="16">?</text>
-            </g>
-          </g>
-
-          <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="96" height="34" rx="8" fill="#FDF8EE" />
-            <text x="48" y="21" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              MAZES
-            </text>
-
-            <rect x="110" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
-            <text x="160" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              46 PAGES
-            </text>
-
-            <rect x="224" y="0" width="106" height="34" rx="8" fill="#FDF0ED" />
-            <text x="277" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              US LETTER & A4
-            </text>
-          </g>
-        </svg>
+        <div className={`relative w-full h-full overflow-hidden ${className}`}>
+          <Image
+            src="/logic_mazes_patterns_cover_page.png"
+            alt={title || 'Preschool Logic, Mazes & Patterns Cover'}
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            priority={priority}
+          />
+        </div>
       );
 
     case 'the-complete-preschool-bundle':
