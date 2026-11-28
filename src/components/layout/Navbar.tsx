@@ -9,6 +9,17 @@ export function Navbar() {
   const { cartCount, openCart } = useCart();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const handleAnchorClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    if (typeof window !== 'undefined' && window.location.pathname === '/') {
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth' });
+        setMobileMenuOpen(false);
+      }
+    }
+  };
+
   return (
     <header className="sticky top-0 z-40 w-full bg-[#FAF8F5]/90 backdrop-blur-md border-b border-border-warm transition-all">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-18 flex items-center justify-between">
@@ -33,24 +44,28 @@ export function Navbar() {
         <nav className="hidden md:flex items-center gap-8">
           <Link
             href="/#shop"
+            onClick={(e) => handleAnchorClick(e, 'shop')}
             className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             Shop
           </Link>
           <Link
             href="/#bundle"
+            onClick={(e) => handleAnchorClick(e, 'bundle')}
             className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             Bundles
           </Link>
           <Link
             href="/#free-sample"
+            onClick={(e) => handleAnchorClick(e, 'free-sample')}
             className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             Free Sample
           </Link>
           <Link
             href="/#faq"
+            onClick={(e) => handleAnchorClick(e, 'faq')}
             className="text-base font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
             FAQ
@@ -110,28 +125,28 @@ export function Navbar() {
         <div className="md:hidden bg-white border-b border-border-warm px-4 py-4 space-y-3 shadow-md animate-slide-down">
           <Link
             href="/#shop"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleAnchorClick(e, 'shop')}
             className="block px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
             Shop Workbooks
           </Link>
           <Link
             href="/#bundle"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleAnchorClick(e, 'bundle')}
             className="block px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
             Bundles
           </Link>
           <Link
             href="/#free-sample"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleAnchorClick(e, 'free-sample')}
             className="block px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
             Free 8-Page Starter Pack
           </Link>
           <Link
             href="/#faq"
-            onClick={() => setMobileMenuOpen(false)}
+            onClick={(e) => handleAnchorClick(e, 'faq')}
             className="block px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
             Frequently Asked Questions

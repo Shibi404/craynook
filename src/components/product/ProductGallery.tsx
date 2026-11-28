@@ -15,6 +15,11 @@ export function ProductGallery({ product }: ProductGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
+  // Ensure view starts at the very top when navigating to product
+  React.useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [product.slug]);
+
   const previewCount = product.previewImages.length;
   const currentPreviewSrc = activeIndex > 0 ? product.previewImages[activeIndex - 1] : null;
   const isCurrentRealImage = Boolean(currentPreviewSrc && !currentPreviewSrc.endsWith('.svg'));

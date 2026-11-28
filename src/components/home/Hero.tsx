@@ -57,6 +57,14 @@ function HeroBookShowcase() {
 }
 
 export function Hero() {
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      e.preventDefault();
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative overflow-hidden py-14 md:py-22 bg-cream/50">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -81,14 +89,16 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <Link
                 href="/#shop"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2"
+                onClick={(e) => scrollToSection(e, 'shop')}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer"
               >
                 <span>Shop Workbooks</span>
                 <ArrowRightIcon size={16} />
               </Link>
               <Link
                 href="/#free-sample"
-                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-cream/90 border border-border-warm hover:border-charcoal/25 text-charcoal font-heading font-semibold text-base shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center"
+                onClick={(e) => scrollToSection(e, 'free-sample')}
+                className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-white hover:bg-cream/90 border border-border-warm hover:border-charcoal/25 text-charcoal font-heading font-semibold text-base shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center cursor-pointer"
               >
                 Free 8-Page Sample
               </Link>

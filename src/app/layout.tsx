@@ -58,7 +58,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fredoka.variable} ${plusJakartaSans.variable} scroll-smooth`}
+      className={`${fredoka.variable} ${plusJakartaSans.variable}`}
     >
       <body className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#2D2A26] font-body selection:bg-coral-light selection:text-coral antialiased">
         <ToastProvider>

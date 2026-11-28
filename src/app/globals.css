@@ -32,10 +32,6 @@
   --foreground: #2D2A26;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: #FAF8F5;
   color: #2D2A26;
