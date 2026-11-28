@@ -156,17 +156,52 @@ export const PRODUCTS: Product[] = [
     accentColor: 'marigold',
   },
   {
+    id: 'prod_core_readiness_trio',
+    slug: 'core-readiness-trio',
+    dodoProductId: 'p_prod_dodo_bundle_trio',
+    title: 'Core Readiness Trio (3 Books)',
+    subtitle: 'Alphabet tracing, early math 1–20, and scissor motor skills',
+    price: 15,
+    ageRange: 'Ages 3–5',
+    pageCount: 88,
+    category: 'Bundles',
+    formats: ['US Letter (8.5×11")', 'A4'],
+    coverImage: '/alphabet_tracing_workbook.png',
+    previewImages: [
+      '/previews/alphabet-tracing-p1.svg',
+      '/previews/numbers-math-p1.svg',
+      '/previews/scissor-skills-p1.svg',
+    ],
+    description:
+      'The essential preschool foundation pack! Combines our three core foundational workbooks—Alphabet Tracing & Phonics, Numbers & Early Math 1–20, and Pre-Writing & Scissor Skills—in one convenient 88-page master download.',
+    highlights: [
+      'Includes 3 core workbooks (88 total printable pages)',
+      'Alphabet Tracing & Phonics Workbook (36 pages)',
+      'Numbers & Early Math 1–20 (32 pages)',
+      'Pre-Writing & Scissor Skills Pack (20 pages)',
+      'Instant download: print individual worksheets or bind the whole series',
+    ],
+    isBundle: true,
+    badge: '3 Core Books',
+    accentColor: 'coral',
+    bundleIncludes: [
+      'Alphabet Tracing & Phonics (36 pages)',
+      'Numbers & Early Math (32 pages)',
+      'Pre-Writing & Scissor Skills (20 pages)',
+    ],
+  },
+  {
     id: 'prod_complete_bundle',
-    slug: 'the-complete-preschool-bundle',
+    slug: 'the-complete-craynook-bundle',
     dodoProductId: 'p_prod_dodo_bundle_all',
-    title: 'The Complete Preschool Bundle (All 5 Books)',
-    subtitle: 'Everything your little learner needs in one complete 5-in-1 pack',
+    title: 'The Complete CrayNook Bundle (All 5 Books)',
+    subtitle: 'All 5 best-selling workbooks: literacy, math, cutting skills, coloring, and logic',
     price: 19,
     ageRange: 'Ages 3–5',
     pageCount: 120,
     category: 'Bundles',
     formats: ['US Letter (8.5×11")', 'A4'],
-    coverImage: '/covers/complete-bundle.svg',
+    coverImage: '/alphabet_tracing_workbook.png',
     previewImages: [
       '/previews/complete-bundle-p1.svg',
       '/previews/complete-bundle-p2.svg',
@@ -186,16 +221,19 @@ export const PRODUCTS: Product[] = [
     badge: 'All 5 Workbooks',
     accentColor: 'coral',
     bundleIncludes: [
-      'Alphabet Tracing & Phonics Workbook (36 pages)',
-      'Numbers & Early Math 1–20 (32 pages)',
-      'Pre-Writing & Scissor Skills Pack (20 pages)',
-      'Dinosaur Adventure Coloring Book (13 pages)',
+      'Alphabet Tracing & Phonics (36 pages)',
+      'Numbers & Early Math (32 pages)',
+      'Pre-Writing & Scissor Skills (20 pages)',
+      'Dinosaur Adventure Coloring (13 pages)',
       'Preschool Logic, Mazes & Patterns (19 pages)',
     ],
   },
 ];
 
 export function getProductBySlug(slug: string): Product | undefined {
+  if (slug === 'the-complete-preschool-bundle') {
+    return PRODUCTS.find((p) => p.slug === 'the-complete-craynook-bundle');
+  }
   return PRODUCTS.find((p) => p.slug === slug);
 }
 

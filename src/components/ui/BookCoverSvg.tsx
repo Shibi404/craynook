@@ -107,90 +107,140 @@ function renderCover(
         </div>
       );
 
+    case 'core-readiness-trio':
+      return <TrioBundleCover className={className} priority={priority} />;
+
+    case 'the-complete-craynook-bundle':
     case 'the-complete-preschool-bundle':
     default:
-      return (
-        <svg
-          viewBox="0 0 400 520"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`w-full h-full select-none ${className}`}
-          aria-label={title || 'The Complete Preschool Bundle Cover'}
-        >
-          {/* Bundle Luxury Stack */}
-          <rect width="400" height="520" rx="16" fill="#FFFFFF" />
-
-          {/* Ribbon Badge */}
-          <g transform="translate(245, 12)">
-            <path d="M0 0H120V38L60 28L0 38V0Z" fill="#E86F51" />
-            <text x="60" y="18" textAnchor="middle" fill="#FFFFFF" fontFamily="var(--font-fredoka)" fontWeight="700" fontSize="11" letterSpacing="1">
-              5-IN-1
-            </text>
-          </g>
-
-          {/* Header */}
-          <rect x="30" y="32" width="200" height="36" rx="8" fill="#FDF0ED" />
-          <text x="130" y="55" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka), sans-serif" fontWeight="600" fontSize="12" letterSpacing="1.5">
-            ALL-IN-ONE MASTER BUNDLE
-          </text>
-
-          <text x="200" y="112" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="25">
-            The Complete Preschool
-          </text>
-          <text x="200" y="142" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka), sans-serif" fontWeight="700" fontSize="23">
-            5-in-1 Printable Bundle
-          </text>
-          <text x="200" y="166" textAnchor="middle" fill="#6B655E" fontFamily="var(--font-plus-jakarta), sans-serif" fontSize="11">
-            120 Total Pages • 5 Core Workbooks • Print Unlimited Times
-          </text>
-
-          {/* Central Artwork: 5 mini book badges displayed harmoniously */}
-          <g transform="translate(45, 190)">
-            {/* 1: Alphabet */}
-            <rect x="0" y="0" width="95" height="95" rx="10" fill="#FDF0ED" />
-            <text x="47.5" y="48" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">Aa</text>
-            <text x="47.5" y="75" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Alphabet</text>
-
-            {/* 2: Math */}
-            <rect x="110" y="0" width="95" height="95" rx="10" fill="#FDF8EE" />
-            <text x="157.5" y="48" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">123</text>
-            <text x="157.5" y="75" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Early Math</text>
-
-            {/* 3: Scissors */}
-            <rect x="220" y="0" width="95" height="95" rx="10" fill="#F0F5F1" />
-            <text x="267.5" y="48" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="28">✂</text>
-            <text x="267.5" y="75" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Scissor Skills</text>
-
-            {/* 4: Dino */}
-            <rect x="55" y="110" width="95" height="95" rx="10" fill="#EEF6FC" />
-            <text x="102.5" y="158" textAnchor="middle" fill="#6DAEDB" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">🦕</text>
-            <text x="102.5" y="185" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Coloring</text>
-
-            {/* 5: Mazes */}
-            <rect x="165" y="110" width="95" height="95" rx="10" fill="#FDF8EE" />
-            <text x="212.5" y="158" textAnchor="middle" fill="#E9B44C" fontFamily="var(--font-fredoka)" fontWeight="bold" fontSize="30">🧩</text>
-            <text x="212.5" y="185" textAnchor="middle" fill="#2D2A26" fontSize="10" fontWeight="600">Logic Mazes</text>
-          </g>
-
-          <g transform="translate(35, 435)">
-            <rect x="0" y="0" width="100" height="34" rx="8" fill="#FDF0ED" />
-            <text x="50" y="21" textAnchor="middle" fill="#E86F51" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              ALL 5 BOOKS
-            </text>
-
-            <rect x="114" y="0" width="100" height="34" rx="8" fill="#F0F5F1" />
-            <text x="164" y="21" textAnchor="middle" fill="#7A9E7E" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="12">
-              120 PAGES
-            </text>
-
-            <rect x="228" y="0" width="102" height="34" rx="8" fill="#FDF8EE" />
-            <text x="279" y="21" textAnchor="middle" fill="#2D2A26" fontFamily="var(--font-fredoka)" fontWeight="600" fontSize="11">
-              US LETTER & A4
-            </text>
-          </g>
-        </svg>
-      );
+      return <CompleteBundleCover className={className} priority={priority} />;
   }
+}
+
+function TrioBundleCover({
+  className = '',
+  priority = false,
+}: {
+  className?: string;
+  priority?: boolean;
+}) {
+  return (
+    <div
+      className={`relative w-full h-full bg-cream border border-border-warm flex items-center justify-center p-4 select-none overflow-hidden ${className}`}
+    >
+      <div className="relative w-full max-w-[340px] aspect-4/3 flex items-center justify-center">
+        {/* Book 1: Alphabet (Left - tilted -4deg) */}
+        <div className="absolute left-[3%] bottom-[8%] w-[38%] aspect-3/4 -rotate-[4deg] rounded-md sm:rounded-lg overflow-hidden shadow-lg shadow-charcoal/15">
+          <Image
+            src="/alphabet_tracing_workbook.png"
+            alt="Alphabet Tracing & Phonics Cover"
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            priority={priority}
+          />
+        </div>
+
+        {/* Book 2: Numbers & Early Math (Center - tilted 1deg) */}
+        <div className="relative bottom-[6%] w-[40%] aspect-3/4 rotate-[1deg] rounded-md sm:rounded-lg overflow-hidden shadow-xl shadow-charcoal/20 z-10">
+          <Image
+            src="/numbers_early_math_cover_page.png"
+            alt="Numbers & Early Math Cover"
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            priority={priority}
+          />
+        </div>
+
+        {/* Book 3: Pre-Writing & Scissor Skills (Right - tilted 5deg) */}
+        <div className="absolute right-[3%] bottom-[8%] w-[38%] aspect-3/4 rotate-[5deg] rounded-md sm:rounded-lg overflow-hidden shadow-lg shadow-charcoal/15">
+          <Image
+            src="/pre_writing_scissor_skills_cover_page.png"
+            alt="Pre-Writing & Scissor Skills Cover"
+            width={1792}
+            height={2400}
+            className="w-full h-full object-cover"
+            priority={priority}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function CompleteBundleCover({
+  className = '',
+  priority = false,
+}: {
+  className?: string;
+  priority?: boolean;
+}) {
+  return (
+    <div
+      className={`relative w-full h-full bg-cream border border-border-warm flex flex-col items-center justify-center p-4 select-none overflow-hidden ${className}`}
+    >
+      <div className="w-full max-w-[320px] flex flex-col items-center justify-center gap-2 sm:gap-2.5">
+        {/* Row 1: 3 books */}
+        <div className="flex items-center justify-center gap-2 sm:gap-3 w-full">
+          <div className="w-[30%] aspect-3/4 rounded-sm sm:rounded-md overflow-hidden shadow-md shadow-charcoal/15">
+            <Image
+              src="/alphabet_tracing_workbook.png"
+              alt="Alphabet Tracing Cover"
+              width={1792}
+              height={2400}
+              className="w-full h-full object-cover"
+              priority={priority}
+            />
+          </div>
+          <div className="w-[30%] aspect-3/4 rounded-sm sm:rounded-md overflow-hidden shadow-md shadow-charcoal/15">
+            <Image
+              src="/numbers_early_math_cover_page.png"
+              alt="Numbers & Early Math Cover"
+              width={1792}
+              height={2400}
+              className="w-full h-full object-cover"
+              priority={priority}
+            />
+          </div>
+          <div className="w-[30%] aspect-3/4 rounded-sm sm:rounded-md overflow-hidden shadow-md shadow-charcoal/15">
+            <Image
+              src="/pre_writing_scissor_skills_cover_page.png"
+              alt="Scissor Skills Cover"
+              width={1792}
+              height={2400}
+              className="w-full h-full object-cover"
+              priority={priority}
+            />
+          </div>
+        </div>
+
+        {/* Row 2: 2 books centered */}
+        <div className="flex items-center justify-center gap-2 sm:gap-3 w-full">
+          <div className="w-[30%] aspect-3/4 rounded-sm sm:rounded-md overflow-hidden shadow-md shadow-charcoal/15">
+            <Image
+              src="/dinosaur_colouring_book_cover_page.png"
+              alt="Dinosaur Coloring Book Cover"
+              width={1792}
+              height={2400}
+              className="w-full h-full object-cover"
+              priority={priority}
+            />
+          </div>
+          <div className="w-[30%] aspect-3/4 rounded-sm sm:rounded-md overflow-hidden shadow-md shadow-charcoal/15">
+            <Image
+              src="/logic_mazes_patterns_cover_page.png"
+              alt="Logic, Mazes & Patterns Cover"
+              width={1792}
+              height={2400}
+              className="w-full h-full object-cover"
+              priority={priority}
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 function renderPreviewPage(slug: string, index: number, className: string) {

@@ -43,7 +43,7 @@ export function Navbar() {
           >
             <span>Bundles</span>
             <span className="bg-cream text-charcoal text-[10px] font-bold px-2 py-0.5 rounded-full border border-border-warm">
-              5-in-1
+              2 Packs
             </span>
           </Link>
           <Link
@@ -126,7 +126,7 @@ export function Navbar() {
           >
             <span>The Preschool Bundle</span>
             <span className="bg-cream text-charcoal text-xs font-bold px-2 py-0.5 rounded-full border border-border-warm">
-              5-in-1
+              2 Packs
             </span>
           </Link>
           <Link

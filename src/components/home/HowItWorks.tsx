@@ -5,7 +5,7 @@ export function HowItWorks() {
     {
       num: '01',
       title: 'Pick your workbooks',
-      description: 'Choose single subjects or get everything together with the complete 5-in-1 preschool bundle.',
+      description: 'Choose single subjects or get everything together with curated preschool bundles.',
     },
     {
       num: '02',
