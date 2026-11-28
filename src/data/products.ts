@@ -139,9 +139,10 @@ export const PRODUCTS: Product[] = [
     formats: ['US Letter (8.5×11")', 'A4'],
     coverImage: '/logic_mazes_patterns_cover_page.png',
     previewImages: [
-      '/previews/logic-mazes-p1.svg',
-      '/previews/logic-mazes-p2.svg',
-      '/previews/logic-mazes-p3.svg',
+      '/previews/preschool-logic-mazes-patterns/preview_1.jpg',
+      '/previews/preschool-logic-mazes-patterns/preview_2.jpg',
+      '/previews/preschool-logic-mazes-patterns/preview_3.jpg',
+      '/previews/preschool-logic-mazes-patterns/preview_4.jpg',
     ],
     description:
       'Keep energetic minds engaged while building foundational problem-solving abilities. Features cute animal mazes with wide channels, visual sequence completion (AB, AAB, ABC), spot-the-difference challenges, and shadow matching games.',
