@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
-import { CrayNookLogo, CartIcon, SparklesIcon, CloseIcon } from '@/components/ui/Icons';
+import { CrayNookLogo, CartIcon, CloseIcon } from '@/components/ui/Icons';
 
 export function Navbar() {
   const { cartCount, openCart } = useCart();
@@ -39,19 +39,15 @@ export function Navbar() {
           </Link>
           <Link
             href="/#bundle"
-            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading flex items-center gap-1.5"
+            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
-            <span>Bundles</span>
-            <span className="bg-cream text-charcoal text-[10px] font-bold px-2 py-0.5 rounded-full border border-border-warm">
-              2 Packs
-            </span>
+            Bundles
           </Link>
           <Link
             href="/#free-sample"
-            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading flex items-center gap-1"
+            className="text-sm font-semibold text-charcoal hover:text-coral transition-colors font-heading"
           >
-            <SparklesIcon size={14} className="text-marigold" />
-            <span>Free Sample</span>
+            Free Sample
           </Link>
           <Link
             href="/#faq"
@@ -122,20 +118,16 @@ export function Navbar() {
           <Link
             href="/#bundle"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center justify-between px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
+            className="block px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
-            <span>The Preschool Bundle</span>
-            <span className="bg-cream text-charcoal text-xs font-bold px-2 py-0.5 rounded-full border border-border-warm">
-              2 Packs
-            </span>
+            Bundles
           </Link>
           <Link
             href="/#free-sample"
             onClick={() => setMobileMenuOpen(false)}
-            className="flex items-center gap-2 px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
+            className="block px-3 py-2 rounded-xl text-base font-semibold font-heading text-charcoal hover:bg-cream hover:text-coral transition-colors"
           >
-            <SparklesIcon size={16} className="text-marigold" />
-            <span>Free 8-Page Starter Pack</span>
+            Free 8-Page Starter Pack
           </Link>
           <Link
             href="/#faq"
