@@ -50,10 +50,10 @@ export function FreeSampleSection() {
           <div className="md:col-span-5 flex justify-center">
             <div className="relative w-60 sm:w-72 md:w-80 aspect-3/4 rounded-2xl overflow-hidden shadow-2xl shadow-charcoal/10 hover:shadow-charcoal/20 hover:-translate-y-1 bg-white transition-all duration-300 ease-out">
               <Image
-                src="/free_starter_pack_cover_page.webp"
+                src="/free_starter_pack_cover_page.png"
                 alt="Free Starter Pack Printable Workbook Cover"
-                width={896}
-                height={1200}
+                width={1792}
+                height={2400}
                 className="w-full h-full object-cover"
                 sizes="(max-width: 640px) 240px, (max-width: 768px) 288px, 320px"
               />
