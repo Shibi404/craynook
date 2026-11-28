@@ -22,8 +22,6 @@ export function ProductDetails({ product }: ProductDetailsProps) {
           </span>
           <span>•</span>
           <span>{product.pageCount} pages</span>
-          <span>•</span>
-          <span>US Letter &amp; A4</span>
         </div>
 
         <h1 className="font-heading font-medium text-2xl sm:text-3xl text-charcoal tracking-tight">
@@ -51,7 +49,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       <div className="space-y-2.5">
         <button
           onClick={() => addItem(product)}
-          className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-bold text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2"
+          className="w-full py-3.5 px-6 rounded-2xl bg-coral hover:bg-coral-hover text-white font-heading font-medium text-base shadow-sm hover:shadow-md hover:shadow-coral/30 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 flex items-center justify-center gap-2"
         >
           <CartIcon size={18} />
           <span>Add to Cart</span>
@@ -60,7 +58,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
         <button
           onClick={() => checkout({ product, quantity: 1 })}
           disabled={isCheckingOut}
-          className="w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-cream/90 border border-border-warm hover:border-charcoal/25 text-charcoal font-heading font-semibold text-base shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2"
+          className="w-full py-3.5 px-6 rounded-2xl bg-white hover:bg-cream/90 border border-border-warm hover:border-charcoal/25 text-charcoal font-heading font-medium text-base shadow-xs hover:shadow-sm hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 disabled:opacity-60 disabled:hover:translate-y-0 flex items-center justify-center gap-2"
         >
           {isCheckingOut ? (
             <span>Connecting...</span>
@@ -75,7 +73,7 @@ export function ProductDetails({ product }: ProductDetailsProps) {
       </div>
 
       <p className="text-xs text-muted text-center">
-        Instant PDF email delivery • Print unlimited times
+        Instant PDF email delivery • No Account Required
       </p>
 
       {/* Highlights */}
